@@ -28,319 +28,515 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.Language = new System.Windows.Forms.GroupBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.Queries = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.plikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.jezykToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kwerendyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
-            this.splitContainer2.Panel1.SuspendLayout();
-            this.splitContainer2.Panel2.SuspendLayout();
-            this.splitContainer2.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
-            this.splitContainer3.Panel1.SuspendLayout();
-            this.splitContainer3.Panel2.SuspendLayout();
-            this.splitContainer3.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.Queries.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
+            this.MainPanel = new System.Windows.Forms.Panel();
+            this.MainSplit = new System.Windows.Forms.SplitContainer();
+            this.MainLeftPanel = new System.Windows.Forms.Panel();
+            this.StoryGroupBox = new System.Windows.Forms.GroupBox();
+            this.StoryPanel = new System.Windows.Forms.Panel();
+            this.StoryTextBox = new System.Windows.Forms.RichTextBox();
+            this.MainRightPanel = new System.Windows.Forms.Panel();
+            this.QueriesSplitContainer = new System.Windows.Forms.SplitContainer();
+            this.QueryControlPanel = new System.Windows.Forms.Panel();
+            this.QueriesGroupBox = new System.Windows.Forms.GroupBox();
+            this.QueriesGroupBoxPanel = new System.Windows.Forms.Panel();
+            this.QueriesGroupSplitContainer = new System.Windows.Forms.SplitContainer();
+            this.QueryTextPanel = new System.Windows.Forms.Panel();
+            this.QueryText = new System.Windows.Forms.TextBox();
+            this.ExecuteQueryButton = new System.Windows.Forms.Button();
+            this.PrologPanel = new System.Windows.Forms.Panel();
+            this.QueryPrologText = new System.Windows.Forms.RichTextBox();
+            this.MainMenu = new System.Windows.Forms.MenuStrip();
+            this.FileMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.OpenStory = new System.Windows.Forms.ToolStripMenuItem();
+            this.SaveStory = new System.Windows.Forms.ToolStripMenuItem();
+            this.LangMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.CauseFull = new System.Windows.Forms.ToolStripMenuItem();
+            this.CauseAlways = new System.Windows.Forms.ToolStripMenuItem();
+            this.CauseImpossible = new System.Windows.Forms.ToolStripMenuItem();
+            this.CausesTypicallyFull = new System.Windows.Forms.ToolStripMenuItem();
+            this.CausesTypicallyAlways = new System.Windows.Forms.ToolStripMenuItem();
+            this.Invokes = new System.Windows.Forms.ToolStripMenuItem();
+            this.Triggers = new System.Windows.Forms.ToolStripMenuItem();
+            this.Releases = new System.Windows.Forms.ToolStripMenuItem();
+            this.DisableBetween = new System.Windows.Forms.ToolStripMenuItem();
+            this.DisableWhen = new System.Windows.Forms.ToolStripMenuItem();
+            this.QueryMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.QueryWholeSc = new System.Windows.Forms.ToolStripMenuItem();
+            this.NecessarySc = new System.Windows.Forms.ToolStripMenuItem();
+            this.PossiblySc = new System.Windows.Forms.ToolStripMenuItem();
+            this.QueryAction = new System.Windows.Forms.ToolStripMenuItem();
+            this.NecessaryAction = new System.Windows.Forms.ToolStripMenuItem();
+            this.PossiblyAction = new System.Windows.Forms.ToolStripMenuItem();
+            this.QueryFluent = new System.Windows.Forms.ToolStripMenuItem();
+            this.NecessaryFluent = new System.Windows.Forms.ToolStripMenuItem();
+            this.PossiblyFluent = new System.Windows.Forms.ToolStripMenuItem();
+            this.TypicallyFluent = new System.Windows.Forms.ToolStripMenuItem();
+            this.MainPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MainSplit)).BeginInit();
+            this.MainSplit.Panel1.SuspendLayout();
+            this.MainSplit.Panel2.SuspendLayout();
+            this.MainSplit.SuspendLayout();
+            this.MainLeftPanel.SuspendLayout();
+            this.StoryGroupBox.SuspendLayout();
+            this.StoryPanel.SuspendLayout();
+            this.MainRightPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.QueriesSplitContainer)).BeginInit();
+            this.QueriesSplitContainer.Panel1.SuspendLayout();
+            this.QueriesSplitContainer.Panel2.SuspendLayout();
+            this.QueriesSplitContainer.SuspendLayout();
+            this.QueryControlPanel.SuspendLayout();
+            this.QueriesGroupBox.SuspendLayout();
+            this.QueriesGroupBoxPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.QueriesGroupSplitContainer)).BeginInit();
+            this.QueriesGroupSplitContainer.Panel1.SuspendLayout();
+            this.QueriesGroupSplitContainer.Panel2.SuspendLayout();
+            this.QueriesGroupSplitContainer.SuspendLayout();
+            this.QueryTextPanel.SuspendLayout();
+            this.PrologPanel.SuspendLayout();
+            this.MainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // MainPanel
             // 
-            this.panel1.Controls.Add(this.splitContainer1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panel1.Size = new System.Drawing.Size(971, 438);
-            this.panel1.TabIndex = 0;
+            this.MainPanel.Controls.Add(this.MainSplit);
+            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainPanel.Location = new System.Drawing.Point(0, 0);
+            this.MainPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MainPanel.Name = "MainPanel";
+            this.MainPanel.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MainPanel.Size = new System.Drawing.Size(1301, 837);
+            this.MainPanel.TabIndex = 0;
             // 
-            // splitContainer1
+            // MainSplit
             // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
-            this.splitContainer1.Location = new System.Drawing.Point(4, 4);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.splitContainer1.Name = "splitContainer1";
+            this.MainSplit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainSplit.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
+            this.MainSplit.Location = new System.Drawing.Point(4, 5);
+            this.MainSplit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MainSplit.Name = "MainSplit";
             // 
-            // splitContainer1.Panel1
+            // MainSplit.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.panel2);
+            this.MainSplit.Panel1.Controls.Add(this.MainLeftPanel);
             // 
-            // splitContainer1.Panel2
+            // MainSplit.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.panel3);
-            this.splitContainer1.Size = new System.Drawing.Size(963, 430);
-            this.splitContainer1.SplitterDistance = 583;
-            this.splitContainer1.TabIndex = 0;
+            this.MainSplit.Panel2.Controls.Add(this.MainRightPanel);
+            this.MainSplit.Size = new System.Drawing.Size(1293, 827);
+            this.MainSplit.SplitterDistance = 896;
+            this.MainSplit.TabIndex = 0;
             // 
-            // panel2
+            // MainLeftPanel
             // 
-            this.panel2.Controls.Add(this.splitContainer2);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(4, 24, 4, 4);
-            this.panel2.Size = new System.Drawing.Size(583, 430);
-            this.panel2.TabIndex = 0;
+            this.MainLeftPanel.Controls.Add(this.StoryGroupBox);
+            this.MainLeftPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainLeftPanel.Location = new System.Drawing.Point(0, 0);
+            this.MainLeftPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MainLeftPanel.Name = "MainLeftPanel";
+            this.MainLeftPanel.Padding = new System.Windows.Forms.Padding(4, 40, 4, 5);
+            this.MainLeftPanel.Size = new System.Drawing.Size(896, 827);
+            this.MainLeftPanel.TabIndex = 0;
             // 
-            // splitContainer2
+            // StoryGroupBox
             // 
-            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer2.Location = new System.Drawing.Point(4, 24);
-            this.splitContainer2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.splitContainer2.Name = "splitContainer2";
-            this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.StoryGroupBox.Controls.Add(this.StoryPanel);
+            this.StoryGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.StoryGroupBox.Location = new System.Drawing.Point(4, 40);
+            this.StoryGroupBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.StoryGroupBox.Name = "StoryGroupBox";
+            this.StoryGroupBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.StoryGroupBox.Size = new System.Drawing.Size(888, 782);
+            this.StoryGroupBox.TabIndex = 2;
+            this.StoryGroupBox.TabStop = false;
+            this.StoryGroupBox.Text = "Historyjka (scenariusz Sc)";
             // 
-            // splitContainer2.Panel1
+            // StoryPanel
             // 
-            this.splitContainer2.Panel1.Controls.Add(this.panel4);
+            this.StoryPanel.Controls.Add(this.StoryTextBox);
+            this.StoryPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.StoryPanel.Location = new System.Drawing.Point(3, 21);
+            this.StoryPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.StoryPanel.Name = "StoryPanel";
+            this.StoryPanel.Padding = new System.Windows.Forms.Padding(10);
+            this.StoryPanel.Size = new System.Drawing.Size(882, 759);
+            this.StoryPanel.TabIndex = 1;
             // 
-            // splitContainer2.Panel2
+            // StoryTextBox
             // 
-            this.splitContainer2.Panel2.Controls.Add(this.panel5);
-            this.splitContainer2.Size = new System.Drawing.Size(575, 402);
-            this.splitContainer2.SplitterDistance = 186;
-            this.splitContainer2.SplitterWidth = 3;
-            this.splitContainer2.TabIndex = 0;
+            this.StoryTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.StoryTextBox.Location = new System.Drawing.Point(10, 10);
+            this.StoryTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.StoryTextBox.Name = "StoryTextBox";
+            this.StoryTextBox.Size = new System.Drawing.Size(862, 739);
+            this.StoryTextBox.TabIndex = 0;
+            this.StoryTextBox.Text = "father(martin, inka).\nfather(uwe, gloria).\nfather(uwe, melanie).\nfather(uwe, ayal" +
+    "a).";
             // 
-            // panel4
+            // MainRightPanel
             // 
-            this.panel4.Controls.Add(this.richTextBox2);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel4.Name = "panel4";
-            this.panel4.Padding = new System.Windows.Forms.Padding(9, 16, 9, 8);
-            this.panel4.Size = new System.Drawing.Size(575, 186);
-            this.panel4.TabIndex = 0;
+            this.MainRightPanel.Controls.Add(this.QueriesSplitContainer);
+            this.MainRightPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainRightPanel.Location = new System.Drawing.Point(0, 0);
+            this.MainRightPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MainRightPanel.Name = "MainRightPanel";
+            this.MainRightPanel.Padding = new System.Windows.Forms.Padding(4, 30, 4, 5);
+            this.MainRightPanel.Size = new System.Drawing.Size(393, 827);
+            this.MainRightPanel.TabIndex = 0;
             // 
-            // richTextBox2
+            // QueriesSplitContainer
             // 
-            this.richTextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox2.Location = new System.Drawing.Point(9, 16);
-            this.richTextBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(557, 162);
-            this.richTextBox2.TabIndex = 0;
-            this.richTextBox2.Text = "";
+            this.QueriesSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QueriesSplitContainer.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.QueriesSplitContainer.Location = new System.Drawing.Point(4, 30);
+            this.QueriesSplitContainer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.QueriesSplitContainer.Name = "QueriesSplitContainer";
+            this.QueriesSplitContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
-            // panel5
+            // QueriesSplitContainer.Panel1
             // 
-            this.panel5.Controls.Add(this.Language);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel5.Name = "panel5";
-            this.panel5.Padding = new System.Windows.Forms.Padding(9, 8, 9, 8);
-            this.panel5.Size = new System.Drawing.Size(575, 213);
-            this.panel5.TabIndex = 0;
+            this.QueriesSplitContainer.Panel1.Controls.Add(this.QueryControlPanel);
             // 
-            // Language
+            // QueriesSplitContainer.Panel2
             // 
-            this.Language.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Language.Location = new System.Drawing.Point(9, 8);
-            this.Language.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Language.Name = "Language";
-            this.Language.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Language.Size = new System.Drawing.Size(557, 197);
-            this.Language.TabIndex = 0;
-            this.Language.TabStop = false;
-            this.Language.Text = "Jezyk";
+            this.QueriesSplitContainer.Panel2.Controls.Add(this.PrologPanel);
+            this.QueriesSplitContainer.Size = new System.Drawing.Size(385, 792);
+            this.QueriesSplitContainer.SplitterDistance = 125;
+            this.QueriesSplitContainer.TabIndex = 0;
             // 
-            // panel3
+            // QueryControlPanel
             // 
-            this.panel3.Controls.Add(this.splitContainer3);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel3.Name = "panel3";
-            this.panel3.Padding = new System.Windows.Forms.Padding(4, 24, 4, 4);
-            this.panel3.Size = new System.Drawing.Size(376, 430);
-            this.panel3.TabIndex = 0;
+            this.QueryControlPanel.Controls.Add(this.QueriesGroupBox);
+            this.QueryControlPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QueryControlPanel.Location = new System.Drawing.Point(0, 0);
+            this.QueryControlPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.QueryControlPanel.Name = "QueryControlPanel";
+            this.QueryControlPanel.Padding = new System.Windows.Forms.Padding(10, 20, 10, 10);
+            this.QueryControlPanel.Size = new System.Drawing.Size(385, 125);
+            this.QueryControlPanel.TabIndex = 0;
             // 
-            // splitContainer3
+            // QueriesGroupBox
             // 
-            this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer3.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.splitContainer3.Location = new System.Drawing.Point(4, 24);
-            this.splitContainer3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.splitContainer3.Name = "splitContainer3";
-            this.splitContainer3.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.QueriesGroupBox.Controls.Add(this.QueriesGroupBoxPanel);
+            this.QueriesGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QueriesGroupBox.Location = new System.Drawing.Point(10, 20);
+            this.QueriesGroupBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.QueriesGroupBox.Name = "QueriesGroupBox";
+            this.QueriesGroupBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.QueriesGroupBox.Size = new System.Drawing.Size(365, 95);
+            this.QueriesGroupBox.TabIndex = 0;
+            this.QueriesGroupBox.TabStop = false;
+            this.QueriesGroupBox.Text = "Kwerendy";
             // 
-            // splitContainer3.Panel1
+            // QueriesGroupBoxPanel
             // 
-            this.splitContainer3.Panel1.Controls.Add(this.panel6);
+            this.QueriesGroupBoxPanel.Controls.Add(this.QueriesGroupSplitContainer);
+            this.QueriesGroupBoxPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QueriesGroupBoxPanel.Location = new System.Drawing.Point(3, 21);
+            this.QueriesGroupBoxPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.QueriesGroupBoxPanel.Name = "QueriesGroupBoxPanel";
+            this.QueriesGroupBoxPanel.Padding = new System.Windows.Forms.Padding(10);
+            this.QueriesGroupBoxPanel.Size = new System.Drawing.Size(359, 72);
+            this.QueriesGroupBoxPanel.TabIndex = 2;
             // 
-            // splitContainer3.Panel2
+            // QueriesGroupSplitContainer
             // 
-            this.splitContainer3.Panel2.Controls.Add(this.panel7);
-            this.splitContainer3.Size = new System.Drawing.Size(368, 402);
-            this.splitContainer3.SplitterDistance = 85;
-            this.splitContainer3.SplitterWidth = 3;
-            this.splitContainer3.TabIndex = 0;
+            this.QueriesGroupSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QueriesGroupSplitContainer.Location = new System.Drawing.Point(10, 10);
+            this.QueriesGroupSplitContainer.Name = "QueriesGroupSplitContainer";
+            this.QueriesGroupSplitContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
-            // panel6
+            // QueriesGroupSplitContainer.Panel1
             // 
-            this.panel6.Controls.Add(this.Queries);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel6.Name = "panel6";
-            this.panel6.Padding = new System.Windows.Forms.Padding(9, 16, 9, 8);
-            this.panel6.Size = new System.Drawing.Size(368, 85);
-            this.panel6.TabIndex = 0;
+            this.QueriesGroupSplitContainer.Panel1.Controls.Add(this.QueryTextPanel);
             // 
-            // Queries
+            // QueriesGroupSplitContainer.Panel2
             // 
-            this.Queries.Controls.Add(this.button1);
-            this.Queries.Controls.Add(this.textBox1);
-            this.Queries.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Queries.Location = new System.Drawing.Point(9, 16);
-            this.Queries.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Queries.Name = "Queries";
-            this.Queries.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Queries.Size = new System.Drawing.Size(350, 61);
-            this.Queries.TabIndex = 0;
-            this.Queries.TabStop = false;
-            this.Queries.Text = "Kwerendy";
+            this.QueriesGroupSplitContainer.Panel2.Controls.Add(this.ExecuteQueryButton);
+            this.QueriesGroupSplitContainer.Size = new System.Drawing.Size(339, 52);
+            this.QueriesGroupSplitContainer.SplitterDistance = 25;
+            this.QueriesGroupSplitContainer.TabIndex = 1;
             // 
-            // button1
+            // QueryTextPanel
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button1.Location = new System.Drawing.Point(3, 29);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(344, 30);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Zapytaj";
-            this.button1.UseVisualStyleBackColor = true;
+            this.QueryTextPanel.Controls.Add(this.QueryText);
+            this.QueryTextPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QueryTextPanel.Location = new System.Drawing.Point(0, 0);
+            this.QueryTextPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.QueryTextPanel.Name = "QueryTextPanel";
+            this.QueryTextPanel.Padding = new System.Windows.Forms.Padding(10);
+            this.QueryTextPanel.Size = new System.Drawing.Size(339, 25);
+            this.QueryTextPanel.TabIndex = 2;
             // 
-            // textBox1
+            // QueryText
             // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox1.Location = new System.Drawing.Point(3, 17);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(344, 22);
-            this.textBox1.TabIndex = 0;
+            this.QueryText.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QueryText.Location = new System.Drawing.Point(10, 10);
+            this.QueryText.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.QueryText.Name = "QueryText";
+            this.QueryText.Size = new System.Drawing.Size(319, 26);
+            this.QueryText.TabIndex = 0;
+            this.QueryText.Text = "father(uwe, Child)";
             // 
-            // panel7
+            // ExecuteQueryButton
             // 
-            this.panel7.Controls.Add(this.richTextBox1);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel7.Name = "panel7";
-            this.panel7.Padding = new System.Windows.Forms.Padding(9, 8, 9, 8);
-            this.panel7.Size = new System.Drawing.Size(368, 314);
-            this.panel7.TabIndex = 0;
+            this.ExecuteQueryButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ExecuteQueryButton.Location = new System.Drawing.Point(0, 0);
+            this.ExecuteQueryButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ExecuteQueryButton.Name = "ExecuteQueryButton";
+            this.ExecuteQueryButton.Size = new System.Drawing.Size(339, 25);
+            this.ExecuteQueryButton.TabIndex = 1;
+            this.ExecuteQueryButton.Text = "Zapytaj";
+            this.ExecuteQueryButton.UseVisualStyleBackColor = true;
             // 
-            // richTextBox1
+            // PrologPanel
             // 
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Location = new System.Drawing.Point(9, 8);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(350, 298);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "";
+            this.PrologPanel.Controls.Add(this.QueryPrologText);
+            this.PrologPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PrologPanel.Location = new System.Drawing.Point(0, 0);
+            this.PrologPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PrologPanel.Name = "PrologPanel";
+            this.PrologPanel.Padding = new System.Windows.Forms.Padding(10);
+            this.PrologPanel.Size = new System.Drawing.Size(385, 663);
+            this.PrologPanel.TabIndex = 0;
             // 
-            // menuStrip1
+            // QueryPrologText
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.plikToolStripMenuItem,
-            this.jezykToolStripMenuItem,
-            this.kwerendyToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(971, 28);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
+            this.QueryPrologText.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QueryPrologText.Location = new System.Drawing.Point(10, 10);
+            this.QueryPrologText.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.QueryPrologText.Name = "QueryPrologText";
+            this.QueryPrologText.Size = new System.Drawing.Size(365, 643);
+            this.QueryPrologText.TabIndex = 1;
+            this.QueryPrologText.Text = "";
             // 
-            // plikToolStripMenuItem
+            // MainMenu
             // 
-            this.plikToolStripMenuItem.Name = "plikToolStripMenuItem";
-            this.plikToolStripMenuItem.Size = new System.Drawing.Size(44, 24);
-            this.plikToolStripMenuItem.Text = "Plik";
+            this.MainMenu.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.MainMenu.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.MainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.FileMenuItem,
+            this.LangMenuItem,
+            this.QueryMenuItem});
+            this.MainMenu.Location = new System.Drawing.Point(0, 0);
+            this.MainMenu.Name = "MainMenu";
+            this.MainMenu.Size = new System.Drawing.Size(1301, 33);
+            this.MainMenu.TabIndex = 1;
+            this.MainMenu.Text = "menuStrip1";
             // 
-            // jezykToolStripMenuItem
+            // FileMenuItem
             // 
-            this.jezykToolStripMenuItem.Name = "jezykToolStripMenuItem";
-            this.jezykToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
-            this.jezykToolStripMenuItem.Text = "Jezyk";
+            this.FileMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.OpenStory,
+            this.SaveStory});
+            this.FileMenuItem.Name = "FileMenuItem";
+            this.FileMenuItem.Size = new System.Drawing.Size(51, 29);
+            this.FileMenuItem.Text = "Plik";
             // 
-            // kwerendyToolStripMenuItem
+            // OpenStory
             // 
-            this.kwerendyToolStripMenuItem.Name = "kwerendyToolStripMenuItem";
-            this.kwerendyToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
-            this.kwerendyToolStripMenuItem.Text = "Kwerendy";
+            this.OpenStory.Name = "OpenStory";
+            this.OpenStory.Size = new System.Drawing.Size(239, 30);
+            this.OpenStory.Text = "Otwórz scenariusz";
             // 
-            // Form1
+            // SaveStory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.SaveStory.Name = "SaveStory";
+            this.SaveStory.Size = new System.Drawing.Size(239, 30);
+            this.SaveStory.Text = "Zapisz scenariusz";
+            // 
+            // LangMenuItem
+            // 
+            this.LangMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.CauseFull,
+            this.CauseAlways,
+            this.CauseImpossible,
+            this.CausesTypicallyFull,
+            this.CausesTypicallyAlways,
+            this.Invokes,
+            this.Triggers,
+            this.Releases,
+            this.DisableBetween,
+            this.DisableWhen});
+            this.LangMenuItem.Name = "LangMenuItem";
+            this.LangMenuItem.Size = new System.Drawing.Size(65, 29);
+            this.LangMenuItem.Text = "Jezyk";
+            // 
+            // CauseFull
+            // 
+            this.CauseFull.Name = "CauseFull";
+            this.CauseFull.Size = new System.Drawing.Size(297, 30);
+            this.CauseFull.Text = "A causes a if p";
+            // 
+            // CauseAlways
+            // 
+            this.CauseAlways.Name = "CauseAlways";
+            this.CauseAlways.Size = new System.Drawing.Size(297, 30);
+            this.CauseAlways.Text = "A causes a";
+            // 
+            // CauseImpossible
+            // 
+            this.CauseImpossible.Name = "CauseImpossible";
+            this.CauseImpossible.Size = new System.Drawing.Size(297, 30);
+            this.CauseImpossible.Text = "impossible A if p";
+            // 
+            // CausesTypicallyFull
+            // 
+            this.CausesTypicallyFull.Name = "CausesTypicallyFull";
+            this.CausesTypicallyFull.Size = new System.Drawing.Size(297, 30);
+            this.CausesTypicallyFull.Text = "A typically causes a if p";
+            // 
+            // CausesTypicallyAlways
+            // 
+            this.CausesTypicallyAlways.Name = "CausesTypicallyAlways";
+            this.CausesTypicallyAlways.Size = new System.Drawing.Size(297, 30);
+            this.CausesTypicallyAlways.Text = "A typically causes a";
+            // 
+            // Invokes
+            // 
+            this.Invokes.Name = "Invokes";
+            this.Invokes.Size = new System.Drawing.Size(297, 30);
+            this.Invokes.Text = "A invokes B after d if p";
+            // 
+            // Triggers
+            // 
+            this.Triggers.Name = "Triggers";
+            this.Triggers.Size = new System.Drawing.Size(297, 30);
+            this.Triggers.Text = "p triggers A";
+            // 
+            // Releases
+            // 
+            this.Releases.Name = "Releases";
+            this.Releases.Size = new System.Drawing.Size(297, 30);
+            this.Releases.Text = "A releases f if p";
+            // 
+            // DisableBetween
+            // 
+            this.DisableBetween.Name = "DisableBetween";
+            this.DisableBetween.Size = new System.Drawing.Size(297, 30);
+            this.DisableBetween.Text = "disable A between d1, d2";
+            // 
+            // DisableWhen
+            // 
+            this.DisableWhen.Name = "DisableWhen";
+            this.DisableWhen.Size = new System.Drawing.Size(297, 30);
+            this.DisableWhen.Text = "disable A when d";
+            // 
+            // QueryMenuItem
+            // 
+            this.QueryMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.QueryWholeSc,
+            this.QueryAction,
+            this.QueryFluent});
+            this.QueryMenuItem.Name = "QueryMenuItem";
+            this.QueryMenuItem.Size = new System.Drawing.Size(100, 29);
+            this.QueryMenuItem.Text = "Kwerendy";
+            // 
+            // QueryWholeSc
+            // 
+            this.QueryWholeSc.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.NecessarySc,
+            this.PossiblySc});
+            this.QueryWholeSc.Name = "QueryWholeSc";
+            this.QueryWholeSc.Size = new System.Drawing.Size(312, 30);
+            this.QueryWholeSc.Text = "Realizowalności scenariusza";
+            // 
+            // NecessarySc
+            // 
+            this.NecessarySc.Name = "NecessarySc";
+            this.NecessarySc.Size = new System.Drawing.Size(195, 30);
+            this.NecessarySc.Text = "necessary Sc";
+            // 
+            // PossiblySc
+            // 
+            this.PossiblySc.Name = "PossiblySc";
+            this.PossiblySc.Size = new System.Drawing.Size(195, 30);
+            this.PossiblySc.Text = "possibly Sc";
+            // 
+            // QueryAction
+            // 
+            this.QueryAction.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.NecessaryAction,
+            this.PossiblyAction});
+            this.QueryAction.Name = "QueryAction";
+            this.QueryAction.Size = new System.Drawing.Size(312, 30);
+            this.QueryAction.Text = "Wykonywalności akcji";
+            // 
+            // NecessaryAction
+            // 
+            this.NecessaryAction.Name = "NecessaryAction";
+            this.NecessaryAction.Size = new System.Drawing.Size(290, 30);
+            this.NecessaryAction.Text = "necessary A at t when Sc";
+            // 
+            // PossiblyAction
+            // 
+            this.PossiblyAction.Name = "PossiblyAction";
+            this.PossiblyAction.Size = new System.Drawing.Size(290, 30);
+            this.PossiblyAction.Text = "possibly A at t when Sc";
+            // 
+            // QueryFluent
+            // 
+            this.QueryFluent.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.NecessaryFluent,
+            this.PossiblyFluent,
+            this.TypicallyFluent});
+            this.QueryFluent.Name = "QueryFluent";
+            this.QueryFluent.Size = new System.Drawing.Size(312, 30);
+            this.QueryFluent.Text = "Spełnialności";
+            // 
+            // NecessaryFluent
+            // 
+            this.NecessaryFluent.Name = "NecessaryFluent";
+            this.NecessaryFluent.Size = new System.Drawing.Size(287, 30);
+            this.NecessaryFluent.Text = "necessary y at t when Sc";
+            // 
+            // PossiblyFluent
+            // 
+            this.PossiblyFluent.Name = "PossiblyFluent";
+            this.PossiblyFluent.Size = new System.Drawing.Size(287, 30);
+            this.PossiblyFluent.Text = "possibly y at t when Sc";
+            // 
+            // TypicallyFluent
+            // 
+            this.TypicallyFluent.Name = "TypicallyFluent";
+            this.TypicallyFluent.Size = new System.Drawing.Size(287, 30);
+            this.TypicallyFluent.Text = "typically y at t when Sc";
+            // 
+            // MainWindow
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(971, 438);
-            this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.panel1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.ClientSize = new System.Drawing.Size(1301, 837);
+            this.Controls.Add(this.MainMenu);
+            this.Controls.Add(this.MainPanel);
+            this.MainMenuStrip = this.MainMenu;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.panel1.ResumeLayout(false);
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.splitContainer2.Panel1.ResumeLayout(false);
-            this.splitContainer2.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
-            this.splitContainer2.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.splitContainer3.Panel1.ResumeLayout(false);
-            this.splitContainer3.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
-            this.splitContainer3.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.Queries.ResumeLayout(false);
-            this.Queries.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.Name = "MainWindow";
+            this.Text = "Projekt z RW - 3";
+            this.MainPanel.ResumeLayout(false);
+            this.MainSplit.Panel1.ResumeLayout(false);
+            this.MainSplit.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.MainSplit)).EndInit();
+            this.MainSplit.ResumeLayout(false);
+            this.MainLeftPanel.ResumeLayout(false);
+            this.StoryGroupBox.ResumeLayout(false);
+            this.StoryPanel.ResumeLayout(false);
+            this.MainRightPanel.ResumeLayout(false);
+            this.QueriesSplitContainer.Panel1.ResumeLayout(false);
+            this.QueriesSplitContainer.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.QueriesSplitContainer)).EndInit();
+            this.QueriesSplitContainer.ResumeLayout(false);
+            this.QueryControlPanel.ResumeLayout(false);
+            this.QueriesGroupBox.ResumeLayout(false);
+            this.QueriesGroupBoxPanel.ResumeLayout(false);
+            this.QueriesGroupSplitContainer.Panel1.ResumeLayout(false);
+            this.QueriesGroupSplitContainer.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.QueriesGroupSplitContainer)).EndInit();
+            this.QueriesGroupSplitContainer.ResumeLayout(false);
+            this.QueryTextPanel.ResumeLayout(false);
+            this.QueryTextPanel.PerformLayout();
+            this.PrologPanel.ResumeLayout(false);
+            this.MainMenu.ResumeLayout(false);
+            this.MainMenu.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -348,26 +544,49 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.SplitContainer splitContainer3;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.GroupBox Language;
-        private System.Windows.Forms.GroupBox Queries;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem plikToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem jezykToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem kwerendyToolStripMenuItem;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel MainPanel;
+        private System.Windows.Forms.SplitContainer MainSplit;
+        private System.Windows.Forms.Panel MainLeftPanel;
+        private System.Windows.Forms.Panel MainRightPanel;
+        private System.Windows.Forms.SplitContainer QueriesSplitContainer;
+        private System.Windows.Forms.Panel QueryControlPanel;
+        private System.Windows.Forms.Panel PrologPanel;
+        private System.Windows.Forms.GroupBox QueriesGroupBox;
+        private System.Windows.Forms.RichTextBox StoryTextBox;
+        private System.Windows.Forms.MenuStrip MainMenu;
+        private System.Windows.Forms.ToolStripMenuItem FileMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem LangMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem QueryMenuItem;
+        private System.Windows.Forms.RichTextBox QueryPrologText;
+        private System.Windows.Forms.TextBox QueryText;
+        private System.Windows.Forms.Button ExecuteQueryButton;
+        private System.Windows.Forms.GroupBox StoryGroupBox;
+        private System.Windows.Forms.Panel StoryPanel;
+        private System.Windows.Forms.Panel QueriesGroupBoxPanel;
+        private System.Windows.Forms.SplitContainer QueriesGroupSplitContainer;
+        private System.Windows.Forms.Panel QueryTextPanel;
+        private System.Windows.Forms.ToolStripMenuItem QueryWholeSc;
+        private System.Windows.Forms.ToolStripMenuItem NecessarySc;
+        private System.Windows.Forms.ToolStripMenuItem PossiblySc;
+        private System.Windows.Forms.ToolStripMenuItem QueryAction;
+        private System.Windows.Forms.ToolStripMenuItem NecessaryAction;
+        private System.Windows.Forms.ToolStripMenuItem PossiblyAction;
+        private System.Windows.Forms.ToolStripMenuItem QueryFluent;
+        private System.Windows.Forms.ToolStripMenuItem NecessaryFluent;
+        private System.Windows.Forms.ToolStripMenuItem PossiblyFluent;
+        private System.Windows.Forms.ToolStripMenuItem TypicallyFluent;
+        private System.Windows.Forms.ToolStripMenuItem CauseFull;
+        private System.Windows.Forms.ToolStripMenuItem CauseAlways;
+        private System.Windows.Forms.ToolStripMenuItem CauseImpossible;
+        private System.Windows.Forms.ToolStripMenuItem CausesTypicallyFull;
+        private System.Windows.Forms.ToolStripMenuItem CausesTypicallyAlways;
+        private System.Windows.Forms.ToolStripMenuItem Invokes;
+        private System.Windows.Forms.ToolStripMenuItem Triggers;
+        private System.Windows.Forms.ToolStripMenuItem Releases;
+        private System.Windows.Forms.ToolStripMenuItem DisableBetween;
+        private System.Windows.Forms.ToolStripMenuItem DisableWhen;
+        private System.Windows.Forms.ToolStripMenuItem OpenStory;
+        private System.Windows.Forms.ToolStripMenuItem SaveStory;
     }
 }
 
