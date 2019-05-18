@@ -13,12 +13,11 @@ namespace RWSystem
     {
         public static string MakeQuery(string story, string query)
         {
-            string filename = Path.GetTempFileName();
-            StreamWriter sw = File.CreateText(filename);
+            StreamWriter sw = File.CreateText("temp.pl");
             sw.Write(story);
             sw.Close();
             
-            String[] param = { "-q", "-f", filename };
+            String[] param = { "-q", "-f", "temp.pl" };
             try
             {
                 PlEngine.Initialize(param);
