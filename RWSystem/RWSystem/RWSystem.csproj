@@ -68,8 +68,10 @@
     <Compile Include="Translation\InvokesStatementTranslator.cs" />
     <Compile Include="Translation\ReleasesStatementTranslator.cs" />
     <Compile Include="Translation\StatementType.cs" />
+    <Compile Include="Translation\Token.cs" />
     <Compile Include="Translation\TriggersStatementTranslator.cs" />
     <Compile Include="Translation\TypicallyCausesStatementTranslator.cs" />
+    <Compile Include="Utils\ArrayExtensionMethods.cs" />
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>

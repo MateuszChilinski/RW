@@ -8,11 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using RWSystem.Translation;
 
 namespace RWSystem
 {
     public partial class MainWindow : Form
     {
+        ActionLanguageTranslator actionLanguageTranslator = new ActionLanguageTranslator();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -95,10 +98,10 @@ namespace RWSystem
             QueryPrologText.Text = PrologSystem.MakeQuery(storyInProlog, queryInProlog);
         }
 
-        private string TranslateStoryToProlog(string s)
+        private string TranslateStoryToProlog(string story)
         {
-            // implement translation!!!
-            return s;
+            //return actionLanguageTranslator.Translate(story); //TODO: Uncomment when engine finished.
+            return story;
         }
 
         private string TranslateQueryToProlog(string q)

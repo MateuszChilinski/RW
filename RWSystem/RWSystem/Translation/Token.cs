@@ -8,11 +8,12 @@ namespace RWSystem.Translation
 {
     public class Token
     {
-        private Token(string value) { Value = value }
+        private Token(string value) { Value = value; }
 
-        public string Value { get; set; }
+        public  string Value { get; }
 
         public static Token Causes { get { return new Token("causes"); } }
+        public static Token If { get { return new Token("if"); } }
         public static Token Typically { get { return new Token("typically"); } }
         public static Token Invokes { get { return new Token("invokes"); } }
         public static Token Triggers { get { return new Token("triggers"); } }
