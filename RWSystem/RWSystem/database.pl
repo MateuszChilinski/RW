@@ -1,9 +1,9 @@
 %% plik testowy z reprezetnacją przykładu
 
-typicallyCauses(work, [workDone], [\+ workDone, rested]).
+typicallyCauses(work, [[workDone]], [[\+ workDone], [rested]]).
 
-causes(work, [\+ rested], [\+ workDone, rested]).
+causes(work, [[\+ rested]], [[\+ workDone], [rested]]).
 
-triggers(rest, [\+ rested]).
+triggers(rest,[[\+ rested]]).
 
-causes(rest, [rested]).
+causes(rest, [[rested]]).
