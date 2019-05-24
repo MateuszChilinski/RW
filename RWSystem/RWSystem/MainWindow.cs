@@ -8,11 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using RWSystem.Translation;
 
 namespace RWSystem
 {
     public partial class MainWindow : Form
     {
+        ActionLanguageTranslator actionLanguageTranslator = new ActionLanguageTranslator();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -32,6 +35,8 @@ namespace RWSystem
             Releases.Click += (s, e) => AddScenarioText("A releases f if p");
             DisableBetween.Click += (s, e) => AddScenarioText("disable A between d1, d2");
             DisableWhen.Click += (s, e) => AddScenarioText("disable A when d");
+            acsATBTToolStripMenuItem.Click += (s, e) => AddScenarioText("Acs = { ( A ; t ) , ( B ; t ) }");
+            obsATBTToolStripMenuItem.Click += (s, e) => AddScenarioText("Obs = { ( a ; t ) , ( b ; t ) }");
             NecessarySc.Click += (s, e) => AddQueryText("necessary Sc");
             PossiblySc.Click += (s, e) => AddQueryText("possibly Sc");
             NecessaryAction.Click += (s, e) => AddQueryText("necessary A at t when Sc");
@@ -95,10 +100,10 @@ namespace RWSystem
             QueryPrologText.Text = PrologSystem.MakeQuery(storyInProlog, queryInProlog);
         }
 
-        private string TranslateStoryToProlog(string s)
+        private string TranslateStoryToProlog(string story)
         {
-            // implement translation!!!
-            return s;
+            //return actionLanguageTranslator.Translate(story); //TODO: Uncomment when engine finished.
+            return story;
         }
 
         private string TranslateQueryToProlog(string q)
