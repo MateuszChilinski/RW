@@ -21,5 +21,11 @@ namespace RWSystem.Translation
         public static Token Disabled { get { return new Token("disabled"); } }
         public static Token Between { get { return new Token("between"); } }
         public static Token When { get { return new Token("when"); } }
+        public static Token Acs { get { return new Token("Acs"); } }
+        public static Token Obs { get { return new Token("Obs"); } }
+        public static Token Necessary { get { return new Token("necessary"); } }
+        public static Token Possibly { get { return new Token("possibly"); } }
+        public static Token At { get { return new Token("at"); } }
+
     }
 }

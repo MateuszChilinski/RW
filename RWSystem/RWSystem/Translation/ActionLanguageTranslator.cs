@@ -23,7 +23,11 @@ namespace RWSystem.Translation
             { StatementType.DisableBetween,
                 new DisbaleBetweenStatementTranslator() },
             { StatementType.DisableWhen,
-                new DisableWhenStatementTranslator() }
+                new DisableWhenStatementTranslator() },
+            { StatementType.Actions,
+                new ActionsTranslator() },
+            { StatementType.Observations,
+                new ObservationsTranslator() }
         };
 
         Dictionary<StatementType, Token[]> characteristicTokens = new Dictionary<StatementType, Token[]>()
@@ -41,7 +45,11 @@ namespace RWSystem.Translation
             { StatementType.DisableBetween,
                 new Token[] { Token.Disabled, Token.Between } },
             { StatementType.DisableWhen,
-                new Token[] { Token.Disabled, Token.When } }
+                new Token[] { Token.Disabled, Token.When } },
+            { StatementType.Actions,
+                new Token[] {Token.Acs} },
+            { StatementType.Observations,
+                new Token[] {Token.Obs} },
         };
 
         public string Translate(string story)

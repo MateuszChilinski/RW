@@ -60,6 +60,8 @@
             this.Releases = new System.Windows.Forms.ToolStripMenuItem();
             this.DisableBetween = new System.Windows.Forms.ToolStripMenuItem();
             this.DisableWhen = new System.Windows.Forms.ToolStripMenuItem();
+            this.acsATBTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.obsATBTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.QueryMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.QueryWholeSc = new System.Windows.Forms.ToolStripMenuItem();
             this.NecessarySc = new System.Windows.Forms.ToolStripMenuItem();
@@ -103,15 +105,15 @@
             this.MainPanel.Location = new System.Drawing.Point(0, 0);
             this.MainPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.MainPanel.Size = new System.Drawing.Size(1301, 837);
+            this.MainPanel.Padding = new System.Windows.Forms.Padding(4);
+            this.MainPanel.Size = new System.Drawing.Size(1156, 670);
             this.MainPanel.TabIndex = 0;
             // 
             // MainSplit
             // 
             this.MainSplit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainSplit.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
-            this.MainSplit.Location = new System.Drawing.Point(4, 5);
+            this.MainSplit.Location = new System.Drawing.Point(4, 4);
             this.MainSplit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MainSplit.Name = "MainSplit";
             // 
@@ -122,8 +124,8 @@
             // MainSplit.Panel2
             // 
             this.MainSplit.Panel2.Controls.Add(this.MainRightPanel);
-            this.MainSplit.Size = new System.Drawing.Size(1293, 827);
-            this.MainSplit.SplitterDistance = 896;
+            this.MainSplit.Size = new System.Drawing.Size(1148, 662);
+            this.MainSplit.SplitterDistance = 751;
             this.MainSplit.TabIndex = 0;
             // 
             // MainLeftPanel
@@ -133,19 +135,19 @@
             this.MainLeftPanel.Location = new System.Drawing.Point(0, 0);
             this.MainLeftPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MainLeftPanel.Name = "MainLeftPanel";
-            this.MainLeftPanel.Padding = new System.Windows.Forms.Padding(4, 40, 4, 5);
-            this.MainLeftPanel.Size = new System.Drawing.Size(896, 827);
+            this.MainLeftPanel.Padding = new System.Windows.Forms.Padding(4, 32, 4, 4);
+            this.MainLeftPanel.Size = new System.Drawing.Size(751, 662);
             this.MainLeftPanel.TabIndex = 0;
             // 
             // StoryGroupBox
             // 
             this.StoryGroupBox.Controls.Add(this.StoryPanel);
             this.StoryGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.StoryGroupBox.Location = new System.Drawing.Point(4, 40);
+            this.StoryGroupBox.Location = new System.Drawing.Point(4, 32);
             this.StoryGroupBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.StoryGroupBox.Name = "StoryGroupBox";
             this.StoryGroupBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.StoryGroupBox.Size = new System.Drawing.Size(888, 782);
+            this.StoryGroupBox.Size = new System.Drawing.Size(743, 626);
             this.StoryGroupBox.TabIndex = 2;
             this.StoryGroupBox.TabStop = false;
             this.StoryGroupBox.Text = "Historyjka (scenariusz Sc)";
@@ -154,20 +156,20 @@
             // 
             this.StoryPanel.Controls.Add(this.StoryTextBox);
             this.StoryPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.StoryPanel.Location = new System.Drawing.Point(3, 21);
+            this.StoryPanel.Location = new System.Drawing.Point(3, 17);
             this.StoryPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.StoryPanel.Name = "StoryPanel";
-            this.StoryPanel.Padding = new System.Windows.Forms.Padding(10);
-            this.StoryPanel.Size = new System.Drawing.Size(882, 759);
+            this.StoryPanel.Padding = new System.Windows.Forms.Padding(9, 8, 9, 8);
+            this.StoryPanel.Size = new System.Drawing.Size(737, 607);
             this.StoryPanel.TabIndex = 1;
             // 
             // StoryTextBox
             // 
             this.StoryTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.StoryTextBox.Location = new System.Drawing.Point(10, 10);
+            this.StoryTextBox.Location = new System.Drawing.Point(9, 8);
             this.StoryTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.StoryTextBox.Name = "StoryTextBox";
-            this.StoryTextBox.Size = new System.Drawing.Size(862, 739);
+            this.StoryTextBox.Size = new System.Drawing.Size(719, 591);
             this.StoryTextBox.TabIndex = 0;
             this.StoryTextBox.Text = "father(martin, inka).\nfather(uwe, gloria).\nfather(uwe, melanie).\nfather(uwe, ayal" +
     "a).";
@@ -179,15 +181,15 @@
             this.MainRightPanel.Location = new System.Drawing.Point(0, 0);
             this.MainRightPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MainRightPanel.Name = "MainRightPanel";
-            this.MainRightPanel.Padding = new System.Windows.Forms.Padding(4, 30, 4, 5);
-            this.MainRightPanel.Size = new System.Drawing.Size(393, 827);
+            this.MainRightPanel.Padding = new System.Windows.Forms.Padding(4, 24, 4, 4);
+            this.MainRightPanel.Size = new System.Drawing.Size(393, 662);
             this.MainRightPanel.TabIndex = 0;
             // 
             // QueriesSplitContainer
             // 
             this.QueriesSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.QueriesSplitContainer.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.QueriesSplitContainer.Location = new System.Drawing.Point(4, 30);
+            this.QueriesSplitContainer.Location = new System.Drawing.Point(4, 24);
             this.QueriesSplitContainer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.QueriesSplitContainer.Name = "QueriesSplitContainer";
             this.QueriesSplitContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -199,8 +201,9 @@
             // QueriesSplitContainer.Panel2
             // 
             this.QueriesSplitContainer.Panel2.Controls.Add(this.PrologPanel);
-            this.QueriesSplitContainer.Size = new System.Drawing.Size(385, 792);
+            this.QueriesSplitContainer.Size = new System.Drawing.Size(385, 634);
             this.QueriesSplitContainer.SplitterDistance = 125;
+            this.QueriesSplitContainer.SplitterWidth = 3;
             this.QueriesSplitContainer.TabIndex = 0;
             // 
             // QueryControlPanel
@@ -210,7 +213,7 @@
             this.QueryControlPanel.Location = new System.Drawing.Point(0, 0);
             this.QueryControlPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.QueryControlPanel.Name = "QueryControlPanel";
-            this.QueryControlPanel.Padding = new System.Windows.Forms.Padding(10, 20, 10, 10);
+            this.QueryControlPanel.Padding = new System.Windows.Forms.Padding(9, 16, 9, 8);
             this.QueryControlPanel.Size = new System.Drawing.Size(385, 125);
             this.QueryControlPanel.TabIndex = 0;
             // 
@@ -218,11 +221,11 @@
             // 
             this.QueriesGroupBox.Controls.Add(this.QueriesGroupBoxPanel);
             this.QueriesGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.QueriesGroupBox.Location = new System.Drawing.Point(10, 20);
+            this.QueriesGroupBox.Location = new System.Drawing.Point(9, 16);
             this.QueriesGroupBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.QueriesGroupBox.Name = "QueriesGroupBox";
             this.QueriesGroupBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.QueriesGroupBox.Size = new System.Drawing.Size(365, 95);
+            this.QueriesGroupBox.Size = new System.Drawing.Size(367, 101);
             this.QueriesGroupBox.TabIndex = 0;
             this.QueriesGroupBox.TabStop = false;
             this.QueriesGroupBox.Text = "Kwerendy";
@@ -231,17 +234,18 @@
             // 
             this.QueriesGroupBoxPanel.Controls.Add(this.QueriesGroupSplitContainer);
             this.QueriesGroupBoxPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.QueriesGroupBoxPanel.Location = new System.Drawing.Point(3, 21);
+            this.QueriesGroupBoxPanel.Location = new System.Drawing.Point(3, 17);
             this.QueriesGroupBoxPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.QueriesGroupBoxPanel.Name = "QueriesGroupBoxPanel";
-            this.QueriesGroupBoxPanel.Padding = new System.Windows.Forms.Padding(10);
-            this.QueriesGroupBoxPanel.Size = new System.Drawing.Size(359, 72);
+            this.QueriesGroupBoxPanel.Padding = new System.Windows.Forms.Padding(9, 8, 9, 8);
+            this.QueriesGroupBoxPanel.Size = new System.Drawing.Size(361, 82);
             this.QueriesGroupBoxPanel.TabIndex = 2;
             // 
             // QueriesGroupSplitContainer
             // 
             this.QueriesGroupSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.QueriesGroupSplitContainer.Location = new System.Drawing.Point(10, 10);
+            this.QueriesGroupSplitContainer.Location = new System.Drawing.Point(9, 8);
+            this.QueriesGroupSplitContainer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.QueriesGroupSplitContainer.Name = "QueriesGroupSplitContainer";
             this.QueriesGroupSplitContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -252,8 +256,9 @@
             // QueriesGroupSplitContainer.Panel2
             // 
             this.QueriesGroupSplitContainer.Panel2.Controls.Add(this.ExecuteQueryButton);
-            this.QueriesGroupSplitContainer.Size = new System.Drawing.Size(339, 52);
-            this.QueriesGroupSplitContainer.SplitterDistance = 25;
+            this.QueriesGroupSplitContainer.Size = new System.Drawing.Size(343, 66);
+            this.QueriesGroupSplitContainer.SplitterDistance = 29;
+            this.QueriesGroupSplitContainer.SplitterWidth = 3;
             this.QueriesGroupSplitContainer.TabIndex = 1;
             // 
             // QueryTextPanel
@@ -263,17 +268,17 @@
             this.QueryTextPanel.Location = new System.Drawing.Point(0, 0);
             this.QueryTextPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.QueryTextPanel.Name = "QueryTextPanel";
-            this.QueryTextPanel.Padding = new System.Windows.Forms.Padding(10);
-            this.QueryTextPanel.Size = new System.Drawing.Size(339, 25);
+            this.QueryTextPanel.Padding = new System.Windows.Forms.Padding(9, 8, 9, 8);
+            this.QueryTextPanel.Size = new System.Drawing.Size(343, 29);
             this.QueryTextPanel.TabIndex = 2;
             // 
             // QueryText
             // 
             this.QueryText.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.QueryText.Location = new System.Drawing.Point(10, 10);
+            this.QueryText.Location = new System.Drawing.Point(9, 8);
             this.QueryText.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.QueryText.Name = "QueryText";
-            this.QueryText.Size = new System.Drawing.Size(319, 26);
+            this.QueryText.Size = new System.Drawing.Size(325, 22);
             this.QueryText.TabIndex = 0;
             this.QueryText.Text = "father(uwe, Child)";
             // 
@@ -283,7 +288,7 @@
             this.ExecuteQueryButton.Location = new System.Drawing.Point(0, 0);
             this.ExecuteQueryButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ExecuteQueryButton.Name = "ExecuteQueryButton";
-            this.ExecuteQueryButton.Size = new System.Drawing.Size(339, 25);
+            this.ExecuteQueryButton.Size = new System.Drawing.Size(343, 34);
             this.ExecuteQueryButton.TabIndex = 1;
             this.ExecuteQueryButton.Text = "Zapytaj";
             this.ExecuteQueryButton.UseVisualStyleBackColor = true;
@@ -295,17 +300,17 @@
             this.PrologPanel.Location = new System.Drawing.Point(0, 0);
             this.PrologPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PrologPanel.Name = "PrologPanel";
-            this.PrologPanel.Padding = new System.Windows.Forms.Padding(10);
-            this.PrologPanel.Size = new System.Drawing.Size(385, 663);
+            this.PrologPanel.Padding = new System.Windows.Forms.Padding(9, 8, 9, 8);
+            this.PrologPanel.Size = new System.Drawing.Size(385, 506);
             this.PrologPanel.TabIndex = 0;
             // 
             // QueryPrologText
             // 
             this.QueryPrologText.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.QueryPrologText.Location = new System.Drawing.Point(10, 10);
+            this.QueryPrologText.Location = new System.Drawing.Point(9, 8);
             this.QueryPrologText.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.QueryPrologText.Name = "QueryPrologText";
-            this.QueryPrologText.Size = new System.Drawing.Size(365, 643);
+            this.QueryPrologText.Size = new System.Drawing.Size(367, 490);
             this.QueryPrologText.TabIndex = 1;
             this.QueryPrologText.Text = "";
             // 
@@ -319,7 +324,8 @@
             this.QueryMenuItem});
             this.MainMenu.Location = new System.Drawing.Point(0, 0);
             this.MainMenu.Name = "MainMenu";
-            this.MainMenu.Size = new System.Drawing.Size(1301, 33);
+            this.MainMenu.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.MainMenu.Size = new System.Drawing.Size(1156, 28);
             this.MainMenu.TabIndex = 1;
             this.MainMenu.Text = "menuStrip1";
             // 
@@ -329,19 +335,19 @@
             this.OpenStory,
             this.SaveStory});
             this.FileMenuItem.Name = "FileMenuItem";
-            this.FileMenuItem.Size = new System.Drawing.Size(51, 29);
+            this.FileMenuItem.Size = new System.Drawing.Size(44, 24);
             this.FileMenuItem.Text = "Plik";
             // 
             // OpenStory
             // 
             this.OpenStory.Name = "OpenStory";
-            this.OpenStory.Size = new System.Drawing.Size(239, 30);
+            this.OpenStory.Size = new System.Drawing.Size(203, 26);
             this.OpenStory.Text = "Otwórz scenariusz";
             // 
             // SaveStory
             // 
             this.SaveStory.Name = "SaveStory";
-            this.SaveStory.Size = new System.Drawing.Size(239, 30);
+            this.SaveStory.Size = new System.Drawing.Size(203, 26);
             this.SaveStory.Text = "Zapisz scenariusz";
             // 
             // LangMenuItem
@@ -356,70 +362,84 @@
             this.Triggers,
             this.Releases,
             this.DisableBetween,
-            this.DisableWhen});
+            this.DisableWhen,
+            this.acsATBTToolStripMenuItem,
+            this.obsATBTToolStripMenuItem});
             this.LangMenuItem.Name = "LangMenuItem";
-            this.LangMenuItem.Size = new System.Drawing.Size(65, 29);
+            this.LangMenuItem.Size = new System.Drawing.Size(55, 24);
             this.LangMenuItem.Text = "Jezyk";
             // 
             // CauseFull
             // 
             this.CauseFull.Name = "CauseFull";
-            this.CauseFull.Size = new System.Drawing.Size(297, 30);
+            this.CauseFull.Size = new System.Drawing.Size(252, 26);
             this.CauseFull.Text = "A causes a if p";
             // 
             // CauseAlways
             // 
             this.CauseAlways.Name = "CauseAlways";
-            this.CauseAlways.Size = new System.Drawing.Size(297, 30);
+            this.CauseAlways.Size = new System.Drawing.Size(252, 26);
             this.CauseAlways.Text = "A causes a";
             // 
             // CauseImpossible
             // 
             this.CauseImpossible.Name = "CauseImpossible";
-            this.CauseImpossible.Size = new System.Drawing.Size(297, 30);
+            this.CauseImpossible.Size = new System.Drawing.Size(252, 26);
             this.CauseImpossible.Text = "impossible A if p";
             // 
             // CausesTypicallyFull
             // 
             this.CausesTypicallyFull.Name = "CausesTypicallyFull";
-            this.CausesTypicallyFull.Size = new System.Drawing.Size(297, 30);
+            this.CausesTypicallyFull.Size = new System.Drawing.Size(252, 26);
             this.CausesTypicallyFull.Text = "A typically causes a if p";
             // 
             // CausesTypicallyAlways
             // 
             this.CausesTypicallyAlways.Name = "CausesTypicallyAlways";
-            this.CausesTypicallyAlways.Size = new System.Drawing.Size(297, 30);
+            this.CausesTypicallyAlways.Size = new System.Drawing.Size(252, 26);
             this.CausesTypicallyAlways.Text = "A typically causes a";
             // 
             // Invokes
             // 
             this.Invokes.Name = "Invokes";
-            this.Invokes.Size = new System.Drawing.Size(297, 30);
+            this.Invokes.Size = new System.Drawing.Size(252, 26);
             this.Invokes.Text = "A invokes B after d if p";
             // 
             // Triggers
             // 
             this.Triggers.Name = "Triggers";
-            this.Triggers.Size = new System.Drawing.Size(297, 30);
+            this.Triggers.Size = new System.Drawing.Size(252, 26);
             this.Triggers.Text = "p triggers A";
             // 
             // Releases
             // 
             this.Releases.Name = "Releases";
-            this.Releases.Size = new System.Drawing.Size(297, 30);
+            this.Releases.Size = new System.Drawing.Size(252, 26);
             this.Releases.Text = "A releases f if p";
             // 
             // DisableBetween
             // 
             this.DisableBetween.Name = "DisableBetween";
-            this.DisableBetween.Size = new System.Drawing.Size(297, 30);
+            this.DisableBetween.Size = new System.Drawing.Size(252, 26);
             this.DisableBetween.Text = "disable A between d1, d2";
             // 
             // DisableWhen
             // 
             this.DisableWhen.Name = "DisableWhen";
-            this.DisableWhen.Size = new System.Drawing.Size(297, 30);
+            this.DisableWhen.Size = new System.Drawing.Size(252, 26);
             this.DisableWhen.Text = "disable A when d";
+            // 
+            // acsATBTToolStripMenuItem
+            // 
+            this.acsATBTToolStripMenuItem.Name = "acsATBTToolStripMenuItem";
+            this.acsATBTToolStripMenuItem.Size = new System.Drawing.Size(252, 26);
+            this.acsATBTToolStripMenuItem.Text = "Acs = { ( A ; t ) , ( B ; t ) }";
+            // 
+            // obsATBTToolStripMenuItem
+            // 
+            this.obsATBTToolStripMenuItem.Name = "obsATBTToolStripMenuItem";
+            this.obsATBTToolStripMenuItem.Size = new System.Drawing.Size(252, 26);
+            this.obsATBTToolStripMenuItem.Text = "Obs = { ( a ; t ) , ( b ; t ) }";
             // 
             // QueryMenuItem
             // 
@@ -428,7 +448,7 @@
             this.QueryAction,
             this.QueryFluent});
             this.QueryMenuItem.Name = "QueryMenuItem";
-            this.QueryMenuItem.Size = new System.Drawing.Size(100, 29);
+            this.QueryMenuItem.Size = new System.Drawing.Size(85, 24);
             this.QueryMenuItem.Text = "Kwerendy";
             // 
             // QueryWholeSc
@@ -437,19 +457,19 @@
             this.NecessarySc,
             this.PossiblySc});
             this.QueryWholeSc.Name = "QueryWholeSc";
-            this.QueryWholeSc.Size = new System.Drawing.Size(312, 30);
+            this.QueryWholeSc.Size = new System.Drawing.Size(269, 26);
             this.QueryWholeSc.Text = "Realizowalności scenariusza";
             // 
             // NecessarySc
             // 
             this.NecessarySc.Name = "NecessarySc";
-            this.NecessarySc.Size = new System.Drawing.Size(195, 30);
+            this.NecessarySc.Size = new System.Drawing.Size(166, 26);
             this.NecessarySc.Text = "necessary Sc";
             // 
             // PossiblySc
             // 
             this.PossiblySc.Name = "PossiblySc";
-            this.PossiblySc.Size = new System.Drawing.Size(195, 30);
+            this.PossiblySc.Size = new System.Drawing.Size(166, 26);
             this.PossiblySc.Text = "possibly Sc";
             // 
             // QueryAction
@@ -458,19 +478,19 @@
             this.NecessaryAction,
             this.PossiblyAction});
             this.QueryAction.Name = "QueryAction";
-            this.QueryAction.Size = new System.Drawing.Size(312, 30);
+            this.QueryAction.Size = new System.Drawing.Size(269, 26);
             this.QueryAction.Text = "Wykonywalności akcji";
             // 
             // NecessaryAction
             // 
             this.NecessaryAction.Name = "NecessaryAction";
-            this.NecessaryAction.Size = new System.Drawing.Size(290, 30);
+            this.NecessaryAction.Size = new System.Drawing.Size(245, 26);
             this.NecessaryAction.Text = "necessary A at t when Sc";
             // 
             // PossiblyAction
             // 
             this.PossiblyAction.Name = "PossiblyAction";
-            this.PossiblyAction.Size = new System.Drawing.Size(290, 30);
+            this.PossiblyAction.Size = new System.Drawing.Size(245, 26);
             this.PossiblyAction.Text = "possibly A at t when Sc";
             // 
             // QueryFluent
@@ -480,32 +500,32 @@
             this.PossiblyFluent,
             this.TypicallyFluent});
             this.QueryFluent.Name = "QueryFluent";
-            this.QueryFluent.Size = new System.Drawing.Size(312, 30);
+            this.QueryFluent.Size = new System.Drawing.Size(269, 26);
             this.QueryFluent.Text = "Spełnialności";
             // 
             // NecessaryFluent
             // 
             this.NecessaryFluent.Name = "NecessaryFluent";
-            this.NecessaryFluent.Size = new System.Drawing.Size(287, 30);
+            this.NecessaryFluent.Size = new System.Drawing.Size(242, 26);
             this.NecessaryFluent.Text = "necessary y at t when Sc";
             // 
             // PossiblyFluent
             // 
             this.PossiblyFluent.Name = "PossiblyFluent";
-            this.PossiblyFluent.Size = new System.Drawing.Size(287, 30);
+            this.PossiblyFluent.Size = new System.Drawing.Size(242, 26);
             this.PossiblyFluent.Text = "possibly y at t when Sc";
             // 
             // TypicallyFluent
             // 
             this.TypicallyFluent.Name = "TypicallyFluent";
-            this.TypicallyFluent.Size = new System.Drawing.Size(287, 30);
+            this.TypicallyFluent.Size = new System.Drawing.Size(242, 26);
             this.TypicallyFluent.Text = "typically y at t when Sc";
             // 
             // MainWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1301, 837);
+            this.ClientSize = new System.Drawing.Size(1156, 670);
             this.Controls.Add(this.MainMenu);
             this.Controls.Add(this.MainPanel);
             this.MainMenuStrip = this.MainMenu;
@@ -587,6 +607,8 @@
         private System.Windows.Forms.ToolStripMenuItem DisableWhen;
         private System.Windows.Forms.ToolStripMenuItem OpenStory;
         private System.Windows.Forms.ToolStripMenuItem SaveStory;
+        private System.Windows.Forms.ToolStripMenuItem acsATBTToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem obsATBTToolStripMenuItem;
     }
 }
 
