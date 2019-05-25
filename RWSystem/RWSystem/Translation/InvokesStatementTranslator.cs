@@ -19,12 +19,16 @@ namespace RWSystem.Translation
             int indexOfInvokes = Array.IndexOf(tokens, Token.Invokes.Value);
             string resultAction = tokens[indexOfInvokes + 1];
              
-            int indexOfDelay = Array.IndexOf(tokens, Token.After.Value);
-            if (!int.TryParse(tokens[indexOfDelay + 1], out int delay) || delay < 0)
-              throw new Exception("Parametr określający czas musi być dodatnią liczbą całkowitą!");
+            int indexOfAfter = Array.IndexOf(tokens, Token.After.Value);
+            int delay = 0;
+            if(indexOfAfter > 0)
+                if (!int.TryParse(tokens[indexOfAfter + 1], out delay) || delay < 0)
+                   throw new Exception("Parametr określający czas musi być dodatnią liczbą całkowitą!");
 
             int indexOfIf = Array.IndexOf(tokens, Token.After.Value);
-            string condition = TranslateFormula(tokens.SubArray(indexOfIf, tokens.Length));
+            string condition = "1=1";
+            if(indexOfIf > 0)
+                condition = TranslateFormula(tokens.SubArray(indexOfIf + 1, tokens.Length));
  
             return $"invokes({action}, {resultAction}, {delay.ToString(CultureInfo.InvariantCulture)}, {condition}).";
         }

@@ -14,14 +14,15 @@ namespace RWSystem.Translation
         //into 'disable_between(A, start, end).'
         public override string Translate(string[] tokens)
         {
-            string action = tokens[0];
+            int disableIndex = Array.IndexOf(tokens, Token.Disable.Value);
+            string action = tokens[disableIndex + 1];
             
             int betweenIndex = Array.IndexOf(tokens, Token.Between.Value);
 
             if(!int.TryParse(tokens[betweenIndex + 1], out int start) || start < 0)
                 throw new Exception("Czas początkowy musi być liczbą całkowitą, nieujemną!");
 
-            if (!int.TryParse(tokens[betweenIndex + 2], out int end) || end <= 0 || end >= start)
+            if (!int.TryParse(tokens[betweenIndex + 2], out int end) || end <= 0 || end <= start)
                 throw new Exception("Czas końcowy musi być liczbą, dodatną oraz większą od start!");
 
             return $"disable_between({action}, {start.ToString(CultureInfo.InvariantCulture)}, {end.ToString(CultureInfo.InvariantCulture)}).";

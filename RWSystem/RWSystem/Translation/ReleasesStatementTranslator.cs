@@ -13,15 +13,25 @@ namespace RWSystem.Translation
         //into 'releases(A, f, <condition>).'
         public override string Translate(string[] tokens)
         {
-          string action = tokens[0];
-        
-          int indexOfReleases = Array.IndexOf(tokens, Token.Releases.Value);
-          string fluent = tokens[indexOfReleases + 1];
-        
-          int indexOfIf = Array.IndexOf(tokens, Token.After.Value);
-          string condition = TranslateFormula(tokens.SubArray(indexOfIf, tokens.Length));
-        
-          return $"releases({action}, {fluent}, {condition}).";
+            string action = tokens[0];
+            
+            int indexOfReleases = Array.IndexOf(tokens, Token.Releases.Value);
+            int indexOfIf = Array.IndexOf(tokens, Token.After.Value);
+            string condition = "1=1";
+            string fluent;
+            if (indexOfIf < 0)
+            {
+                condition = "1=1";
+                fluent = TranslateFormula(tokens.SubArray(indexOfReleases + 1, tokens.Length));
+            }
+            else
+            {
+                condition = TranslateFormula(tokens.SubArray(indexOfIf + 1, tokens.Length));
+                fluent = TranslateFormula(tokens.SubArray(indexOfReleases + 1, indexOfIf));
+            }
+           
+
+            return $"releases({action}, {fluent}, {condition}).";
         }
   }
 }
