@@ -15,7 +15,7 @@ namespace RWSystem.Translation
        {
           string action = tokens[0];
           int indexOfIf = Array.IndexOf(tokens, Token.If.Value);
-          string condition = "1=1";
+          string condition = "[]";
 
           if(indexOfIf < 2)
               condition = TranslateFormula(tokens.SubArray(indexOfIf + 1, tokens.Length));

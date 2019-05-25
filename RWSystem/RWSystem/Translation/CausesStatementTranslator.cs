@@ -26,7 +26,7 @@ namespace RWSystem.Translation
             }
             else
             {
-                condition = "1=1";
+                condition = "[]";
                 result = TranslateFormula(tokens.SubArray(indexOfCauses + 1, tokens.Length));
             }           
             return $"causes({action}, {result}, {condition}).";

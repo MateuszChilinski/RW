@@ -127,7 +127,7 @@ namespace RWSystem
             }
             catch(Exception e)
             {
-                MessageBox.Show(e.Message, "Błąd historyjki", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(e.Message + "\n" + e.InnerException.Message, "Błąd historyjki.", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
         }

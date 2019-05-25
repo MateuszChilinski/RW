@@ -25,8 +25,8 @@ namespace RWSystem.Translation
                 if (!int.TryParse(tokens[indexOfAfter + 1], out delay) || delay < 0)
                    throw new Exception("Parametr określający czas musi być dodatnią liczbą całkowitą!");
 
-            int indexOfIf = Array.IndexOf(tokens, Token.After.Value);
-            string condition = "1=1";
+            int indexOfIf = Array.IndexOf(tokens, Token.If.Value);
+            string condition = "[]";
             if(indexOfIf > 0)
                 condition = TranslateFormula(tokens.SubArray(indexOfIf + 1, tokens.Length));
  

@@ -28,8 +28,8 @@ namespace RWSystem
       "PayFine causes ¬fine, ticketV alid if fine";
 
     public const string Example3Sc =
-      "Work typically causes workDone if ¬workDone ^ rested" + "\n" +
-      "Work causes ¬rested if ¬workDone ^ rested" + "\n" +
+      "Work typically causes workDone if ¬workDone and rested" + "\n" +
+      "Work causes ¬rested if ¬workDone and rested" + "\n" +
       "¬rested triggers Rest" + "\n" +
       "Rest causes rested";
   }

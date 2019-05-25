@@ -17,11 +17,11 @@ namespace RWSystem.Translation
             
             int indexOfReleases = Array.IndexOf(tokens, Token.Releases.Value);
             int indexOfIf = Array.IndexOf(tokens, Token.After.Value);
-            string condition = "1=1";
+            string condition;
             string fluent;
             if (indexOfIf < 0)
             {
-                condition = "1=1";
+                condition = "[]";
                 fluent = TranslateFormula(tokens.SubArray(indexOfReleases + 1, tokens.Length));
             }
             else
