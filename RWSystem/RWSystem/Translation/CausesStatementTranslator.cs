@@ -15,9 +15,14 @@ namespace RWSystem.Translation
         {
             string action = tokens[0];
             int indexOfIf = Array.IndexOf(tokens, Token.If.Value);
-            string result = TranslateFormula(tokens.SubArray(2, indexOfIf));
-            string condition = TranslateFormula(tokens.SubArray(indexOfIf, tokens.Length));
+            int indexOfCauses =  Array.IndexOf(tokens, Token.Causes.Value);
 
+            string condition = "1=1";
+            if(indexOfIf > 0)
+              condition = TranslateFormula(tokens.SubArray(indexOfIf, tokens.Length));
+
+            string result = TranslateFormula(tokens.SubArray(2, indexOfIf));
+           
             return $"causes({action}, {result}, {condition}).";
         }
     }

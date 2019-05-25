@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,9 +9,16 @@ namespace RWSystem.Translation
 {
     class DisableWhenStatementTranslator : BaseTranslator
     {
+        //Translates 'Disable A when d'
+        //into 'disable_when(A, d).'
         public override string Translate(string[] tokens)
         {
-            throw new NotImplementedException();
+            string action = tokens[0];
+
+            if (!int.TryParse(tokens[1], out int moment) || moment < 0)
+                throw new Exception("Moment czasowy musi być liczbą całkowitą, dodatnią!");
+
+            return $"disable_when({action}, {moment.ToString(CultureInfo.InvariantCulture)}.";
         }
     }
 }

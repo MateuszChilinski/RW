@@ -17,7 +17,7 @@ namespace RWSystem
             sw.Write(story);
             sw.Close();
             
-            String[] param = { "-q", "-f", "temp.pl" };
+            string[] param = { "-q", "-f", "temp.pl" };
             try
             {
                 PlEngine.Initialize(param);

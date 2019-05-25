@@ -81,7 +81,7 @@ namespace RWSystem.Translation
 
         string TranslateLiteral(string literal)
         {
-            if (literal.StartsWith("~") || literal.StartsWith("¬"))
+            if (literal.StartsWith("~"))
                 return "not_" + literal.Substring(1);
             return literal;
         }

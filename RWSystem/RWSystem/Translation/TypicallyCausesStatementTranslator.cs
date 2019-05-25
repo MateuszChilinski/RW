@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RWSystem.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,9 +9,17 @@ namespace RWSystem.Translation
 {
     class TypicallyCausesStatementTranslator : BaseTranslator
     {
-        public override string Translate(string[] tokens)
-        {
-            throw new NotImplementedException();
-        }
+       //Translates 'A typically causes <result> if <condition>'
+       //into 'typically_causes(A, <result>, <condition>).'
+       public override string Translate(string[] tokens)
+       {
+          string action = tokens[0];
+          int indexOfIf = Array.IndexOf(tokens, Token.If.Value);
+          int indexOfTypicallyCauses = Array.IndexOf(tokens, Token.Causes.Value);
+          string result = TranslateFormula(tokens.SubArray(indexOfTypicallyCauses, indexOfIf));
+          string condition = TranslateFormula(tokens.SubArray(indexOfIf, tokens.Length));
+
+          return $"typically_causes({action}, {result}, {condition}).";
+       }
     }
 }

@@ -39,9 +39,9 @@ namespace RWSystem.Translation
             { StatementType.Releases,
                 new Token[] { Token.Releases } },
             { StatementType.DisableBetween,
-                new Token[] { Token.Disabled, Token.Between } },
+                new Token[] { Token.Disable, Token.Between } },
             { StatementType.DisableWhen,
-                new Token[] { Token.Disabled, Token.When } }
+                new Token[] { Token.Disable, Token.When } }
         };
 
         public string Translate(string story)
@@ -51,12 +51,14 @@ namespace RWSystem.Translation
                 StringSplitOptions.None
             );
 
-            return String.Join("\n", statements.Select(s => TranslateStatement(s)));
+            return string.Join("\n", statements.Select(s => TranslateStatement(s)));
         }
 
         string TranslateStatement(string statement)
         {
-            string[] tokens = statement.Split(' ');
+            string[] tokens = statement.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                                       .Select(s => s.Trim(','))
+                                       .ToArray();
             StatementType? statementType = GetStatementType(tokens);
 
             if (!statementType.HasValue)
