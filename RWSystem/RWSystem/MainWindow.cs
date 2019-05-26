@@ -37,6 +37,8 @@ namespace RWSystem
             Releases.Click += (s, e) => AddScenarioText("A releases f if p");
             DisableBetween.Click += (s, e) => AddScenarioText("disable A between d1, d2");
             DisableWhen.Click += (s, e) => AddScenarioText("disable A when d");
+            acsATBTToolStripMenuItem.Click += (s, e) => AddScenarioText("Acs = { ( A ; t ) , ( B ; t ) }");
+            obsATBTToolStripMenuItem.Click += (s, e) => AddScenarioText("Obs = { ( a ; t ) , ( b ; t ) }");
             NecessarySc.Click += (s, e) => AddQueryText("necessary Sc");
             PossiblySc.Click += (s, e) => AddQueryText("possibly Sc");
             NecessaryAction.Click += (s, e) => AddQueryText("necessary A at t when Sc");

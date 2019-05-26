@@ -14,6 +14,8 @@ namespace RWSystem.Translation
         Triggers,
         Releases,
         DisableBetween,
-        DisableWhen
+        DisableWhen,
+        Observations,
+        Actions
     }
 }
