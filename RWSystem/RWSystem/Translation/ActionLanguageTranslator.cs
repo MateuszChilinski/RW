@@ -32,10 +32,10 @@ namespace RWSystem.Translation
 
         Dictionary<StatementType, Token[]> characteristicTokens = new Dictionary<StatementType, Token[]>()
         {
-            { StatementType.Causes,
-                new Token[] { Token.Causes} },
             { StatementType.TypicallyCauses,
                 new Token[] { Token.Typically, Token.Causes } },
+            { StatementType.Causes,
+                new Token[] { Token.Causes} },
             { StatementType.Invokes,
                 new Token[] { Token.Invokes } },
             { StatementType.Triggers,
@@ -43,9 +43,9 @@ namespace RWSystem.Translation
             { StatementType.Releases,
                 new Token[] { Token.Releases } },
             { StatementType.DisableBetween,
-                new Token[] { Token.Disabled, Token.Between } },
+                new Token[] { Token.Disable, Token.Between } },
             { StatementType.DisableWhen,
-                new Token[] { Token.Disabled, Token.When } },
+                new Token[] { Token.Disable, Token.When } },
             { StatementType.Actions,
                 new Token[] {Token.Acs} },
             { StatementType.Observations,
@@ -59,16 +59,31 @@ namespace RWSystem.Translation
                 StringSplitOptions.None
             );
 
-            return String.Join("\n", statements.Select(s => TranslateStatement(s)));
+            StringBuilder translation = new StringBuilder();
+            for(int i = 0; i < statements.Length; i++)
+            {
+                try
+                {
+                    translation.Append(TranslateStatement(statements[i]) + "\n");
+                }
+                catch(Exception e)
+                {
+                    throw new Exception("Błąd składni. Linia: " + (i + 1).ToString(), e);
+                }
+            }
+
+            return translation.ToString().TrimEnd('\n');
         }
 
         string TranslateStatement(string statement)
         {
-            string[] tokens = statement.Split(' ');
+            string[] tokens = statement.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                                       .Select(s => s.Trim(','))
+                                       .ToArray();
             StatementType? statementType = GetStatementType(tokens);
 
             if (!statementType.HasValue)
-                throw new Exception("Invalid statement");
+                throw new Exception("Zdanie nie należy do języka akcji.");
 
             return translators[statementType.Value].Translate(tokens);
         }

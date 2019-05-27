@@ -14,6 +14,8 @@ namespace RWSystem
 {
     public partial class MainWindow : Form
     {
+        private object lastFocused;
+
         ActionLanguageTranslator actionLanguageTranslator = new ActionLanguageTranslator();
 
         public MainWindow()
@@ -45,8 +47,17 @@ namespace RWSystem
             PossiblyFluent.Click += (s, e) => AddQueryText("possibly y at t when Sc");
             TypicallyFluent.Click += (s, e) => AddQueryText("typically y at t when Sc");
 
+            StoryTextBox.GotFocus += (s, e) => lastFocused = s;
+            QueryText.GotFocus += (s, e) => lastFocused = s;      
+
             OpenStory.Click += (s, e) => OpenFile();
             SaveStory.Click += (s, e) => SaveFile();
+
+            Example1.Click += (s, e) => ReplaceScenarioText(Examples.Example1Sc);
+            Example2.Click += (s, e) => ReplaceScenarioText(Examples.Example2Sc);
+            Example3.Click += (s, e) => ReplaceScenarioText(Examples.Example3Sc);
+
+            NegationSymbol.Click += (s, e) => AddNegationSymbol();
         }
 
         private void SaveFile()
@@ -93,23 +104,66 @@ namespace RWSystem
         {
             StoryTextBox.Text += "\n" + s;
         }
+        private void ReplaceScenarioText(string s)
+        {
+            StoryTextBox.Text = s;
+        }
         private void ExecuteQuery(object sender, EventArgs e)
         {
             string storyInProlog = TranslateStoryToProlog(StoryTextBox.Text);
+            if (string.IsNullOrWhiteSpace(storyInProlog))
+                return;
+
             string queryInProlog = TranslateQueryToProlog(QueryText.Text);
-            QueryPrologText.Text = PrologSystem.MakeQuery(storyInProlog, queryInProlog);
+            if (string.IsNullOrWhiteSpace(queryInProlog))
+                return;
+
+      QueryPrologText.Text = storyInProlog;
+            //QueryPrologText.Text = PrologSystem.MakeQuery(storyInProlog, queryInProlog);
+
         }
 
         private string TranslateStoryToProlog(string story)
         {
-            //return actionLanguageTranslator.Translate(story); //TODO: Uncomment when engine finished.
-            return story;
+            try
+            {
+                return actionLanguageTranslator.Translate(story);
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message + "\n" + e.InnerException.Message, "Błąd historyjki.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
         }
 
         private string TranslateQueryToProlog(string q)
         {
-            // implement translation!!!
-            return q;
+            try
+            {
+              //return actionLanguageTranslator.Translate(story);
+              return q;
+            }
+            catch (Exception e)
+            {
+              MessageBox.Show(e.Message, "Błąd kwerendy", MessageBoxButtons.OK, MessageBoxIcon.Error);
+              return null;
+            }
+        }
+
+        private void AddNegationSymbol()
+        {
+            if (lastFocused == null || lastFocused == StoryTextBox)
+            {
+                int caretIndex = StoryTextBox.SelectionStart;
+                StoryTextBox.Text = StoryTextBox.Text.Insert(caretIndex, "¬");
+                StoryTextBox.SelectionStart = caretIndex + 1;
+            }
+            else if (lastFocused == QueryText)
+            {
+                int caretIndex = QueryText.SelectionStart;
+                QueryText.Text = QueryText.Text.Insert(caretIndex, "¬");
+                QueryText.SelectionStart = caretIndex + 1;
+            }          
         }
     }
 }

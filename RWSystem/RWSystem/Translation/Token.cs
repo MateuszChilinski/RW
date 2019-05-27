@@ -16,9 +16,10 @@ namespace RWSystem.Translation
         public static Token If { get { return new Token("if"); } }
         public static Token Typically { get { return new Token("typically"); } }
         public static Token Invokes { get { return new Token("invokes"); } }
+        public static Token After { get { return new Token("after"); } }
         public static Token Triggers { get { return new Token("triggers"); } }
         public static Token Releases { get { return new Token("releases"); } }
-        public static Token Disabled { get { return new Token("disabled"); } }
+        public static Token Disable { get { return new Token("disable"); } }
         public static Token Between { get { return new Token("between"); } }
         public static Token When { get { return new Token("when"); } }
         public static Token Acs { get { return new Token("Acs"); } }
