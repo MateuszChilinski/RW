@@ -32,10 +32,10 @@ namespace RWSystem.Translation
 
         Dictionary<StatementType, Token[]> characteristicTokens = new Dictionary<StatementType, Token[]>()
         {
-            { StatementType.Causes,
-                new Token[] { Token.Causes} },
             { StatementType.TypicallyCauses,
                 new Token[] { Token.Typically, Token.Causes } },
+            { StatementType.Causes,
+                new Token[] { Token.Causes} },
             { StatementType.Invokes,
                 new Token[] { Token.Invokes } },
             { StatementType.Triggers,

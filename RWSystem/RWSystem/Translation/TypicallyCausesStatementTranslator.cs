@@ -15,14 +15,21 @@ namespace RWSystem.Translation
        {
           string action = tokens[0];
           int indexOfIf = Array.IndexOf(tokens, Token.If.Value);
-          string condition = "[]";
-
-          if(indexOfIf < 2)
-              condition = TranslateFormula(tokens.SubArray(indexOfIf + 1, tokens.Length));
-
           int indexOfTypicallyCauses = Array.IndexOf(tokens, Token.Causes.Value);
-          string result = TranslateFormula(tokens.SubArray(indexOfTypicallyCauses + 1, indexOfIf));
-          
+
+          string condition = "[]";
+          string result = "[]";
+
+          if (indexOfIf > 2)
+          {
+              condition = TranslateFormula(tokens.SubArray(indexOfIf + 1, tokens.Length));
+              result = TranslateFormula(tokens.SubArray(indexOfTypicallyCauses + 1, indexOfIf));
+          }
+          else
+          {
+              result = TranslateFormula(tokens.SubArray(indexOfTypicallyCauses + 1, tokens.Length));
+          }
+
           return $"typically_causes({action}, {result}, {condition}).";
        }
     }

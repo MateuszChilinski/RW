@@ -118,7 +118,9 @@ namespace RWSystem
             if (string.IsNullOrWhiteSpace(queryInProlog))
                 return;
 
-            QueryPrologText.Text = PrologSystem.MakeQuery(storyInProlog, queryInProlog);
+      QueryPrologText.Text = storyInProlog;
+            //QueryPrologText.Text = PrologSystem.MakeQuery(storyInProlog, queryInProlog);
+
         }
 
         private string TranslateStoryToProlog(string story)

@@ -8,8 +8,8 @@ namespace RWSystem.Translation
 {
     enum StatementType
     {
-        Causes,
         TypicallyCauses,
+        Causes,
         Invokes,
         Triggers,
         Releases,

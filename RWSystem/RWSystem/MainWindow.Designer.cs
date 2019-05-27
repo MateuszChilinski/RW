@@ -130,7 +130,7 @@
       // 
       this.MainSplit.Panel2.Controls.Add(this.MainRightPanel);
       this.MainSplit.Size = new System.Drawing.Size(859, 534);
-      this.MainSplit.SplitterDistance = 463;
+      this.MainSplit.SplitterDistance = 464;
       this.MainSplit.SplitterWidth = 3;
       this.MainSplit.TabIndex = 0;
       // 
@@ -142,7 +142,7 @@
       this.MainLeftPanel.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
       this.MainLeftPanel.Name = "MainLeftPanel";
       this.MainLeftPanel.Padding = new System.Windows.Forms.Padding(3, 26, 3, 3);
-      this.MainLeftPanel.Size = new System.Drawing.Size(463, 534);
+      this.MainLeftPanel.Size = new System.Drawing.Size(464, 534);
       this.MainLeftPanel.TabIndex = 0;
       // 
       // StoryGroupBox
@@ -153,7 +153,7 @@
       this.StoryGroupBox.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
       this.StoryGroupBox.Name = "StoryGroupBox";
       this.StoryGroupBox.Padding = new System.Windows.Forms.Padding(2, 1, 2, 1);
-      this.StoryGroupBox.Size = new System.Drawing.Size(457, 505);
+      this.StoryGroupBox.Size = new System.Drawing.Size(458, 505);
       this.StoryGroupBox.TabIndex = 2;
       this.StoryGroupBox.TabStop = false;
       this.StoryGroupBox.Text = "Historyjka (scenariusz Sc)";
@@ -166,7 +166,7 @@
       this.StoryPanel.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
       this.StoryPanel.Name = "StoryPanel";
       this.StoryPanel.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
-      this.StoryPanel.Size = new System.Drawing.Size(453, 490);
+      this.StoryPanel.Size = new System.Drawing.Size(454, 490);
       this.StoryPanel.TabIndex = 1;
       // 
       // StoryTextBox
@@ -175,7 +175,7 @@
       this.StoryTextBox.Location = new System.Drawing.Point(7, 6);
       this.StoryTextBox.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
       this.StoryTextBox.Name = "StoryTextBox";
-      this.StoryTextBox.Size = new System.Drawing.Size(439, 478);
+      this.StoryTextBox.Size = new System.Drawing.Size(440, 478);
       this.StoryTextBox.TabIndex = 0;
       this.StoryTextBox.Text = "father(martin, inka).\nfather(uwe, gloria).\nfather(uwe, melanie).\nfather(uwe, ayal" +
     "a).";
@@ -188,7 +188,7 @@
       this.MainRightPanel.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
       this.MainRightPanel.Name = "MainRightPanel";
       this.MainRightPanel.Padding = new System.Windows.Forms.Padding(3, 19, 3, 3);
-      this.MainRightPanel.Size = new System.Drawing.Size(393, 534);
+      this.MainRightPanel.Size = new System.Drawing.Size(392, 534);
       this.MainRightPanel.TabIndex = 0;
       // 
       // QueriesSplitContainer
@@ -207,7 +207,7 @@
       // QueriesSplitContainer.Panel2
       // 
       this.QueriesSplitContainer.Panel2.Controls.Add(this.PrologPanel);
-      this.QueriesSplitContainer.Size = new System.Drawing.Size(387, 512);
+      this.QueriesSplitContainer.Size = new System.Drawing.Size(386, 512);
       this.QueriesSplitContainer.SplitterDistance = 125;
       this.QueriesSplitContainer.SplitterWidth = 3;
       this.QueriesSplitContainer.TabIndex = 0;
@@ -220,7 +220,7 @@
       this.QueryControlPanel.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
       this.QueryControlPanel.Name = "QueryControlPanel";
       this.QueryControlPanel.Padding = new System.Windows.Forms.Padding(7, 13, 7, 6);
-      this.QueryControlPanel.Size = new System.Drawing.Size(387, 125);
+      this.QueryControlPanel.Size = new System.Drawing.Size(386, 125);
       this.QueryControlPanel.TabIndex = 0;
       // 
       // QueriesGroupBox
@@ -231,7 +231,7 @@
       this.QueriesGroupBox.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
       this.QueriesGroupBox.Name = "QueriesGroupBox";
       this.QueriesGroupBox.Padding = new System.Windows.Forms.Padding(2, 1, 2, 1);
-      this.QueriesGroupBox.Size = new System.Drawing.Size(373, 106);
+      this.QueriesGroupBox.Size = new System.Drawing.Size(372, 106);
       this.QueriesGroupBox.TabIndex = 0;
       this.QueriesGroupBox.TabStop = false;
       this.QueriesGroupBox.Text = "Kwerendy";
@@ -244,7 +244,7 @@
       this.QueriesGroupBoxPanel.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
       this.QueriesGroupBoxPanel.Name = "QueriesGroupBoxPanel";
       this.QueriesGroupBoxPanel.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
-      this.QueriesGroupBoxPanel.Size = new System.Drawing.Size(369, 91);
+      this.QueriesGroupBoxPanel.Size = new System.Drawing.Size(368, 91);
       this.QueriesGroupBoxPanel.TabIndex = 2;
       // 
       // QueriesGroupSplitContainer
@@ -262,7 +262,7 @@
       // QueriesGroupSplitContainer.Panel2
       // 
       this.QueriesGroupSplitContainer.Panel2.Controls.Add(this.ExecuteQueryButton);
-      this.QueriesGroupSplitContainer.Size = new System.Drawing.Size(355, 79);
+      this.QueriesGroupSplitContainer.Size = new System.Drawing.Size(354, 79);
       this.QueriesGroupSplitContainer.SplitterDistance = 36;
       this.QueriesGroupSplitContainer.SplitterWidth = 3;
       this.QueriesGroupSplitContainer.TabIndex = 1;
@@ -275,7 +275,7 @@
       this.QueryTextPanel.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
       this.QueryTextPanel.Name = "QueryTextPanel";
       this.QueryTextPanel.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
-      this.QueryTextPanel.Size = new System.Drawing.Size(355, 36);
+      this.QueryTextPanel.Size = new System.Drawing.Size(354, 36);
       this.QueryTextPanel.TabIndex = 2;
       // 
       // QueryText
@@ -284,7 +284,7 @@
       this.QueryText.Location = new System.Drawing.Point(7, 6);
       this.QueryText.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
       this.QueryText.Name = "QueryText";
-      this.QueryText.Size = new System.Drawing.Size(341, 20);
+      this.QueryText.Size = new System.Drawing.Size(340, 20);
       this.QueryText.TabIndex = 0;
       this.QueryText.Text = "father(uwe, Child)";
       // 
@@ -294,7 +294,7 @@
       this.ExecuteQueryButton.Location = new System.Drawing.Point(0, 0);
       this.ExecuteQueryButton.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
       this.ExecuteQueryButton.Name = "ExecuteQueryButton";
-      this.ExecuteQueryButton.Size = new System.Drawing.Size(355, 40);
+      this.ExecuteQueryButton.Size = new System.Drawing.Size(354, 40);
       this.ExecuteQueryButton.TabIndex = 1;
       this.ExecuteQueryButton.Text = "Zapytaj";
       this.ExecuteQueryButton.UseVisualStyleBackColor = true;
@@ -307,7 +307,7 @@
       this.PrologPanel.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
       this.PrologPanel.Name = "PrologPanel";
       this.PrologPanel.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
-      this.PrologPanel.Size = new System.Drawing.Size(387, 384);
+      this.PrologPanel.Size = new System.Drawing.Size(386, 384);
       this.PrologPanel.TabIndex = 0;
       // 
       // QueryPrologText
@@ -317,7 +317,7 @@
       this.QueryPrologText.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
       this.QueryPrologText.Name = "QueryPrologText";
       this.QueryPrologText.ReadOnly = true;
-      this.QueryPrologText.Size = new System.Drawing.Size(373, 372);
+      this.QueryPrologText.Size = new System.Drawing.Size(372, 372);
       this.QueryPrologText.TabIndex = 1;
       this.QueryPrologText.Text = "";
       // 
@@ -437,19 +437,19 @@
       this.DisableWhen.Name = "DisableWhen";
       this.DisableWhen.Size = new System.Drawing.Size(205, 22);
       this.DisableWhen.Text = "disable A when d";
-      //
+      // 
       // acsATBTToolStripMenuItem
       // 
       this.acsATBTToolStripMenuItem.Name = "acsATBTToolStripMenuItem";
-      this.acsATBTToolStripMenuItem.Size = new System.Drawing.Size(252, 26);
+      this.acsATBTToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
       this.acsATBTToolStripMenuItem.Text = "Acs = { ( A ; t ) , ( B ; t ) }";
       // 
       // obsATBTToolStripMenuItem
       // 
       this.obsATBTToolStripMenuItem.Name = "obsATBTToolStripMenuItem";
-      this.obsATBTToolStripMenuItem.Size = new System.Drawing.Size(252, 26);
+      this.obsATBTToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
       this.obsATBTToolStripMenuItem.Text = "Obs = { ( a ; t ) , ( b ; t ) }";
-      //
+      // 
       // QueryMenuItem
       // 
       this.QueryMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
