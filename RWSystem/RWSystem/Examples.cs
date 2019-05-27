@@ -11,9 +11,9 @@ namespace RWSystem
     public const string Example1Sc =
       "¬calm triggers Test" + "\n" +
       "Test causes calm" + "\n" +
-      "disable Oral exam between 0, 2" + "\n" +
-      "Oral exam typically causes ¬calm if ¬corruption" + "\n" +
-      "Oral exam causes ¬corruption" + "\n" +
+      "disable OralExam between 0, 2" + "\n" +
+      "OralExam typically causes ¬calm if ¬corruption" + "\n" +
+      "OralExam causes ¬corruption" + "\n" +
       "Test invokes Oral exam after 3" + "\n" +
       "Cleaning causes corruption" + "\n" +
       "disable Oral exam between 7, 1000" + "\n" +

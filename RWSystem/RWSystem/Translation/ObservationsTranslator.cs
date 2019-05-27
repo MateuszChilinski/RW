@@ -14,15 +14,15 @@ namespace RWSystem.Translation
             var openParenthis = tokens.FindAllIndexOf("(");
             var closeParenthis = tokens.FindAllIndexOf(")");
 
-            var output = "";
+            var output = "obs([";
 
             for (int i = 0; i < openParenthis.Length; i++)
             {
                 var observation = TranslateSingleTuple(tokens.SubArray(openParenthis[i] + 1, closeParenthis[i]));
-                output = output + observation + "\n";
+                output += output.EndsWith("[") ? observation : (", " + observation);
             }
 
-            return output;
+            return output + "]).";
         }
 
         private string TranslateSingleTuple(string[] tokens)
@@ -31,7 +31,7 @@ namespace RWSystem.Translation
             var state = TranslateFormula(tokens.SubArray(0, indexOfSeparator));
             var time = tokens[indexOfSeparator + 1];
 
-            return $"observation({state}, {time}).";
+            return $"({state}, {time})";
         }
     }
 }

@@ -14,17 +14,17 @@ namespace RWSystem.Translation
             var openParenthis = tokens.FindAllIndexOf("(");
             var closeParenthis = tokens.FindAllIndexOf(")");
 
-            var output = "";
+            var output = "acs([";
 
             for (int i = 0; i < openParenthis.Length; i++)
             {
                 var tuple = tokens.SubArray(openParenthis[i] + 1, closeParenthis[i]);
-                var action = tuple[0];
+                var action = tuple[0].ToCamelCase();
                 var time = tuple[tuple.Length - 1];
-                output = output + $"action( {action}, {time} )." + "\n";
+                output += output.EndsWith("[") ? $"({action}, {time})" : $", ({action}, {time})";
             }
 
-            return output;
+            return output + "]).";
         }
     }
 }

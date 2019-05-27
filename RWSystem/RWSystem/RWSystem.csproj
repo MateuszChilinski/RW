@@ -81,6 +81,7 @@
     <Compile Include="Translation\TriggersStatementTranslator.cs" />
     <Compile Include="Translation\TypicallyCausesStatementTranslator.cs" />
     <Compile Include="Translation\TypicallyWhenTranslator.cs" />
+    <Compile Include="Utils\StringExtensionMethods.cs" />
     <Compile Include="Utils\ArrayExtensionMethods.cs" />
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
