@@ -15,7 +15,7 @@ namespace RWSystem.Translation
 
             if (char.IsUpper(secondWord[0])) // akcja
             {
-                var action = tokens[1].ToLower();
+                var action = tokens[1].FirstToLower();
                 var time = tokens[3];
 
                 return $"necessaryAction({action}, {time})";

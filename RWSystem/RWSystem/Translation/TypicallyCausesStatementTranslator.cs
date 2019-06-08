@@ -13,7 +13,7 @@ namespace RWSystem.Translation
         //into 'typically_causes(A, <result>, <condition>).'
         public override string Translate(string[] tokens)
         {
-            string action = tokens[0].ToLower();
+            string action = tokens[0].FirstToLower();
             int indexOfIf = Array.IndexOf(tokens, Token.If.Value);
             int indexOfTypicallyCauses = Array.IndexOf(tokens, Token.Causes.Value);
 

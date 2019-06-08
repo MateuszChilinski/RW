@@ -15,7 +15,7 @@ namespace RWSystem.Translation
         public override string Translate(string[] tokens)
         {
             int disableIndex = Array.IndexOf(tokens, Token.Disable.Value);
-            string action = tokens[disableIndex + 1].ToLower();
+            string action = tokens[disableIndex + 1].FirstToLower();
             
             int betweenIndex = Array.IndexOf(tokens, Token.Between.Value);
 

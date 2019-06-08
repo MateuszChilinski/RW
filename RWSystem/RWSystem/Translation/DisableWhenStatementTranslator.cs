@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RWSystem.Utils;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace RWSystem.Translation
         //into 'disable_when(A, d).'
         public override string Translate(string[] tokens)
         {
-            string action = tokens[0].ToLower();
+            string action = tokens[0].FirstToLower();
 
             if (!int.TryParse(tokens[1], out int moment) || moment < 0)
                 throw new Exception("Moment czasowy musi być liczbą całkowitą, dodatnią!");

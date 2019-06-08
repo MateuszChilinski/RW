@@ -11,13 +11,15 @@ namespace RWSystem
     public const string Example1Sc =
       "¬calm triggers Test" + "\n" +
       "Test causes calm" + "\n" +
-      "disable Oral exam between 0, 2" + "\n" +
-      "Oral exam typically causes ¬calm if ¬corruption" + "\n" +
-      "Oral exam causes ¬corruption" + "\n" +
-      "Test invokes Oral exam after 3" + "\n" +
+      "disable OralExam between 0, 2" + "\n" +
+      "OralExam typically causes ¬calm if ¬corruption" + "\n" +
+      "OralExam causes ¬corruption" + "\n" +
+      "Test invokes OralExam after 3" + "\n" +
       "Cleaning causes corruption" + "\n" +
-      "disable Oral exam between 7, 1000" + "\n" +
-      "disable Test between 7, 1000";
+      "disable OralExam between 7, 1000" + "\n" +
+      "disable Test between 7, 1000" + "\n" +
+      "Acs = { ( Cleaning ; 1 ) , ( OralExam ; 3 ) , ( OralExam ; 4 ) }" + "\n" +
+      "Obs = { ( calm ; 0 ) , ( ¬corruption ; 0 ) }";
 
     public const string Example2Sc =
       "disable Control between 0, 2" + "\n" +

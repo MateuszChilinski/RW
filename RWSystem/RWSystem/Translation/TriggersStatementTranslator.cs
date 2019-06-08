@@ -16,7 +16,7 @@ namespace RWSystem.Translation
             int indexOfTriggers = Array.IndexOf(tokens, Token.Triggers.Value);
             string condition = TranslateFormula(tokens.SubArray(0, indexOfTriggers));
 
-            string action = tokens[indexOfTriggers + 1].ToLower();
+            string action = tokens[indexOfTriggers + 1].FirstToLower();
         
             return $"triggers({condition}, {action}).";
         }

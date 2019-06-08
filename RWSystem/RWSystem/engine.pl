@@ -1,29 +1,27 @@
 :- use_module(library(ordsets)).
 
-:- consult(temp)
+:- consult(temp).
 
 :- dynamic
     causes/3,
     negation/2,
-    typicallyCauses/3,
+    typically_causes/3,
     invokes/4,
     triggers/2,
     releases/3,
     disable_between/3.
-
-acs([(cleaning,1), (oralExam,3), (oralExam, 4)]).
-obs([([[calm], [not_corruption]], 0)]).
-
-fluent(Fluent) :-
-    member(Fluent, [calm, not_calm, corruption, not_corruption]).
 
 negation(calm, not_calm).
 negation(not_calm, calm).
 negation(corruption, not_corruption).
 negation(not_corruption, corruption).
 
+fluent(Fluent) :-
+    member(Fluent, [calm, not_calm, corruption, not_corruption]).
+
 action(Action) :-
     member(Action, [test, oralExam, cleaning]).
+
 
 %Predicates for H function
 addAlternative(H, [], T, H2) :- false.
@@ -236,7 +234,7 @@ simulate(H, I, E, N, H2, I2, E2, N2, Timepoint, Timeout) :-
     findall((Action, Effect, Condition), causes(Action, Effect, Condition), CausesList),
     process_causes(CausesList, HT1, IT1, ET1, NT1, HT2, IT2, ET2, NT2, Timepoint),
 
-    findall((Action, Effect, Condition), typicallyCauses(Action, Effect, Condition), TypicallyCausesList),
+    findall((Action, Effect, Condition), typically_causes(Action, Effect, Condition), TypicallyCausesList),
     process_typically_causes(TypicallyCausesList, HT2, IT2, ET2, NT2, HT3, IT3, ET3, NT3, Timepoint),
 
     findall((Action, ResultAction, Period, Condition), invokes(Action, ResultAction, Period, Condition), InvokesList),
@@ -312,9 +310,11 @@ possiblyCondition(Condition, Time) :-
     once( ( get_structure(H, I, E, N), hStar(H, Condition, Time) ) ) .
     
 necessaryAction(Action, Time) :-
+	necessarySc,
     forall(get_structure(H, I, E, N), member((Action, Time), E)).
 
 necessaryCondition(Condition, Time) :-
+	necessarySc,
     forall(get_structure(H, I, E, N), hStar(H, Condition, Time)).
 
 necessarySc :-
