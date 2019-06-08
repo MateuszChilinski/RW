@@ -19,7 +19,7 @@ namespace RWSystem.Translation
             for (int i = 0; i < openParenthis.Length; i++)
             {
                 var tuple = tokens.SubArray(openParenthis[i] + 1, closeParenthis[i]);
-                var action = tuple[0];
+                var action = tuple[0].ToLower();
                 var time = tuple[tuple.Length - 1];
                 output = output + $"action( {action}, {time} )." + "\n";
             }

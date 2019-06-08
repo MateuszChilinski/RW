@@ -39,8 +39,8 @@ namespace RWSystem
             DisableWhen.Click += (s, e) => AddScenarioText("disable A when d");
             acsATBTToolStripMenuItem.Click += (s, e) => AddScenarioText("Acs = { ( A ; t ) , ( B ; t ) }");
             obsATBTToolStripMenuItem.Click += (s, e) => AddScenarioText("Obs = { ( a ; t ) , ( b ; t ) }");
-            NecessarySc.Click += (s, e) => AddQueryText("necessary Sc");
-            PossiblySc.Click += (s, e) => AddQueryText("possibly Sc");
+            NecessarySc.Click += (s, e) => AddQueryText("necessary");
+            PossiblySc.Click += (s, e) => AddQueryText("possibly");
             NecessaryAction.Click += (s, e) => AddQueryText("necessary A at t when Sc");
             PossiblyAction.Click += (s, e) => AddQueryText("possibly A at t when Sc");
             NecessaryFluent.Click += (s, e) => AddQueryText("necessary y at t when Sc");
@@ -118,8 +118,7 @@ namespace RWSystem
             if (string.IsNullOrWhiteSpace(queryInProlog))
                 return;
 
-      QueryPrologText.Text = storyInProlog;
-            //QueryPrologText.Text = PrologSystem.MakeQuery(storyInProlog, queryInProlog);
+            QueryPrologText.Text = PrologSystem.MakeQuery(storyInProlog, queryInProlog);
 
         }
 
@@ -140,8 +139,7 @@ namespace RWSystem
         {
             try
             {
-              //return actionLanguageTranslator.Translate(story);
-              return q;
+              return actionLanguageTranslator.Translate(q);
             }
             catch (Exception e)
             {

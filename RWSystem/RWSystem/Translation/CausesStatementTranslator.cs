@@ -13,7 +13,7 @@ namespace RWSystem.Translation
         //into 'causes(A, <result>, <condition>).'
         public override string Translate(string[] tokens)
         {
-            string action = tokens[0];
+            string action = tokens[0].ToLower();
             int indexOfIf = Array.IndexOf(tokens, Token.If.Value);
             int indexOfCauses =  Array.IndexOf(tokens, Token.Causes.Value);
 

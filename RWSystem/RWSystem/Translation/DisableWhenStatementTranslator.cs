@@ -13,12 +13,12 @@ namespace RWSystem.Translation
         //into 'disable_when(A, d).'
         public override string Translate(string[] tokens)
         {
-            string action = tokens[0];
+            string action = tokens[0].ToLower();
 
             if (!int.TryParse(tokens[1], out int moment) || moment < 0)
                 throw new Exception("Moment czasowy musi być liczbą całkowitą, dodatnią!");
 
-            return $"disable_when({action}, {moment.ToString(CultureInfo.InvariantCulture)}.";
+            return $"disable_between({action}, {moment.ToString(CultureInfo.InvariantCulture)}, {moment.ToString(CultureInfo.InvariantCulture)}).";
         }
     }
 }

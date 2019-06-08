@@ -27,7 +27,9 @@ namespace RWSystem.Translation
             { StatementType.Actions,
                 new ActionsTranslator() },
             { StatementType.Observations,
-                new ObservationsTranslator() }
+                new ObservationsTranslator() },
+            { StatementType.Possibly,
+                new PossiblyTranslator() }
         };
 
         Dictionary<StatementType, Token[]> characteristicTokens = new Dictionary<StatementType, Token[]>()
@@ -50,6 +52,8 @@ namespace RWSystem.Translation
                 new Token[] {Token.Acs} },
             { StatementType.Observations,
                 new Token[] {Token.Obs} },
+            { StatementType.Possibly,
+                new Token[] {Token.Possibly} }
         };
 
         public string Translate(string story)
@@ -60,13 +64,13 @@ namespace RWSystem.Translation
             );
 
             StringBuilder translation = new StringBuilder();
-            for(int i = 0; i < statements.Length; i++)
+            for (int i = 0; i < statements.Length; i++)
             {
                 try
                 {
                     translation.Append(TranslateStatement(statements[i]) + "\n");
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
                     throw new Exception("Błąd składni. Linia: " + (i + 1).ToString(), e);
                 }
@@ -90,7 +94,7 @@ namespace RWSystem.Translation
 
         StatementType? GetStatementType(string[] tokens)
         {
-            foreach(StatementType statemenType in Enum.GetValues(typeof(StatementType)))
+            foreach (StatementType statemenType in Enum.GetValues(typeof(StatementType)))
             {
                 if (characteristicTokens[statemenType].Aggregate(true, (acc, token) => acc && tokens.Contains(token.Value)))
                     return statemenType;
