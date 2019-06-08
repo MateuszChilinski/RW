@@ -10,7 +10,7 @@ namespace RWSystem.Translation
     {
         public override string Translate(string[] tokens)
         {
-            return "necessary( sc ).";
+            return "necessarySc.";
         }
     }
 }

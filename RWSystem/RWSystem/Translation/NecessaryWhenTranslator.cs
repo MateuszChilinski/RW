@@ -25,7 +25,7 @@ namespace RWSystem.Translation
                 var indexOfAt = Array.IndexOf(tokens, Token.At.Value);
                 var formula = TranslateFormula(tokens.SubArray(1, indexOfAt));
                 var time = tokens[indexOfAt + 1];
-                return $"necessaryFormula({formula}, {time})";
+                return $"necessaryCondition({formula}, {time})";
             }
         }
     }
