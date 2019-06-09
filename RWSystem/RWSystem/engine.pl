@@ -4,7 +4,7 @@
 
 :- dynamic
     causes/3,
-    impossible/2
+    impossible/2,
     negation/2,
     typically_causes/3,
     invokes/4,
@@ -59,6 +59,23 @@ complementHistory([Fluent | FluentsTail], H, H2, Timepoint) :-
     ),
     complementHistory(FluentsTail, HT, H2, Timepoint).
 
+complementInitialState(H, H1):-
+    findall((Fluent, Negation),negation(Fluent,Negation), Contrary),
+    fillHistory(Contrary, H, H1).
+
+fillHistory([], H, H).
+fillHistory([(Fluent, Negation)|Rest], H, H1):- 
+    (
+    (\+(member((Fluent, 0), H)), \+(member((Negation, 0), H))) ->
+        (
+            union(H, [(Fluent, 0)], HT)
+            ;
+            union(H, [(Negation, 0)], HT)
+        )
+        ;
+        HT = H
+    ),
+    fillHistory(Rest, HT, H1).
 %Predicates for E function
 addActions(E, [], E2) :- E2 = E.
 
@@ -77,12 +94,12 @@ getAllFluents(OldFluents, [ConjunctionHead | ConjunctionTail], Fluents) :-
 
 processImpossible(E,H) :- 
     findall((Action,Condition), impossible(Action,Condition), ImpossibleList),
-    processImpossibleStatements(E,H,ImpossibleList)
+    processImpossibleStatements(E,H,ImpossibleList).
 
 processImpossibleStatements(E,H,[]).
 processImpossibleStatements(E,H,[(Action, Condition)| Rest]):-
-    findAll(Time, member((Action,Time),E),Timepoints),
-    forall(member(Time, Timepoints), \+(hStar(H, Condition, Time)).
+    findall(Time, member((Action,Time),E),Timepoints),
+    forall(member(Time, Timepoints), \+(hStar(H, Condition, Time))),
     processImpossibleStatements(E, H, Rest).
 
 %Check rules predicates
@@ -286,7 +303,8 @@ get_all_models(H, I, E, N) :-
     addObservations([], OBS, H1),
     acs(ACS),
     addActions([], ACS, E1),
-    simulate(H1, [], E1, [], H, I, E2, N, 0, Timeout),
+    complementInitialState(H1, H2),
+    simulate(H2, [], E1, [], H, I, E2, N, 0, Timeout),
     cutActionsAfterTimeout(E2, E, Timeout).
 
 

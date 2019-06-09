@@ -11,7 +11,7 @@ namespace RWSystem.Translation
     {
         public override string Translate(string[] tokens)
         {
-            string action = tokens[0].FirstToLower();
+            string action = tokens[1].FirstToLower();
             int indexOfIf = Array.IndexOf(tokens, Token.If.Value);
             string condition;
             condition = TranslateFormula(tokens.SubArray(indexOfIf + 1, tokens.Length));
