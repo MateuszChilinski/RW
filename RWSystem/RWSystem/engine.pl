@@ -11,17 +11,6 @@
     releases/3,
     disable_between/3.
 
-negation(calm, not_calm).
-negation(not_calm, calm).
-negation(corruption, not_corruption).
-negation(not_corruption, corruption).
-
-fluent(Fluent) :-
-    member(Fluent, [calm, not_calm, corruption, not_corruption]).
-
-action(Action) :-
-    member(Action, [test, oralExam, cleaning]).
-
 
 %Predicates for H function
 addAlternative(H, [], T, H2) :- false.

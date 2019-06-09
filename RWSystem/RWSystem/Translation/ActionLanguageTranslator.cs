@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RWSystem.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,9 +28,7 @@ namespace RWSystem.Translation
             { StatementType.Actions,
                 new ActionsTranslator() },
             { StatementType.Observations,
-                new ObservationsTranslator() },
-            { StatementType.Possibly,
-                new PossiblyTranslator() }
+                new ObservationsTranslator() }
         };
 
         Dictionary<StatementType, Token[]> characteristicTokens = new Dictionary<StatementType, Token[]>()
@@ -51,9 +50,7 @@ namespace RWSystem.Translation
             { StatementType.Actions,
                 new Token[] {Token.Acs} },
             { StatementType.Observations,
-                new Token[] {Token.Obs} },
-            { StatementType.Possibly,
-                new Token[] {Token.Possibly} }
+                new Token[] {Token.Obs} }
         };
 
         public string Translate(string story)
@@ -75,6 +72,8 @@ namespace RWSystem.Translation
                     throw new Exception("Błąd składni. Linia: " + (i + 1).ToString(), e);
                 }
             }
+
+            translation.Append(FluentsContainer.Instance.FluentsToString());
 
             return translation.ToString().TrimEnd('\n');
         }
