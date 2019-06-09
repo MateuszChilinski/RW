@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RWSystem.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -79,6 +80,8 @@ namespace RWSystem.Translation
                     throw new Exception("Błąd składni. Linia: " + (i + 1).ToString(), e);
                 }
             }
+
+            translation.Append(FluentsContainer.Instance.FluentsToString());
 
             return translation.ToString().TrimEnd('\n');
         }
