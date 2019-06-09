@@ -18,7 +18,7 @@ namespace Tests
 
             var translated = actionLanguageTranslator.Translate(story);
 
-            Assert.AreEqual("causes(A, [[alfa]], []).", translated);
+            Assert.AreEqual("causes(a, [[alfa]], []).", translated);
         }
         [Test]
         public void ImpossibleTest()
@@ -28,7 +28,7 @@ namespace Tests
 
             var translated = actionLanguageTranslator.Translate(story);
 
-            Assert.AreEqual("causes(A, [], [[pi]]).", translated);
+            Assert.AreEqual("causes(a, [], [[pi]]).", translated);
         }
         [Test]
         public void CausesIfTest()
@@ -38,7 +38,7 @@ namespace Tests
 
             var translated = actionLanguageTranslator.Translate(story);
 
-            Assert.AreEqual("causes(A, [[alfa]], [[pi]]).", translated);
+            Assert.AreEqual("causes(a, [[alfa]], [[pi]]).", translated);
         }
         [Test]
         public void TypicallyCausesTest()
@@ -48,7 +48,7 @@ namespace Tests
 
             var translated = actionLanguageTranslator.Translate(story);
 
-            Assert.AreEqual("typically_causes(A, [[alfa]], []).", translated);
+            Assert.AreEqual("typically_causes(a, [[alfa]], []).", translated);
         }
         [Test]
         public void TypicallyCausesIfTest()
@@ -58,7 +58,7 @@ namespace Tests
 
             var translated = actionLanguageTranslator.Translate(story);
 
-            Assert.AreEqual("typically_causes(A, [[alfa]], [[pi]]).", translated);
+            Assert.AreEqual("typically_causes(a, [[alfa]], [[pi]]).", translated);
         }
         [Test]
         public void InvokesAfterIfTest()
@@ -68,7 +68,7 @@ namespace Tests
 
             var translated = actionLanguageTranslator.Translate(story);
 
-            Assert.AreEqual("invokes(A, B, 1, [[pi]]).", translated);
+            Assert.AreEqual("invokes(a, b, 1, [[pi]]).", translated);
         }
         [Test]
         public void InvokesAfterTest()
@@ -78,7 +78,7 @@ namespace Tests
 
             var translated = actionLanguageTranslator.Translate(story);
 
-            Assert.AreEqual("invokes(A, B, 1, []).", translated);
+            Assert.AreEqual("invokes(a, b, 1, []).", translated);
         }
         [Test]
         public void InvokesAfterMinusTest()
@@ -99,7 +99,7 @@ namespace Tests
 
             var translated = actionLanguageTranslator.Translate(story);
 
-            Assert.AreEqual("invokes(A, B, 0, [[pi]]).", translated);
+            Assert.AreEqual("invokes(a, b, 0, [[pi]]).", translated);
         }
         [Test]
         public void InvokesTest()
@@ -109,7 +109,7 @@ namespace Tests
 
             var translated = actionLanguageTranslator.Translate(story);
 
-            Assert.AreEqual("invokes(A, B, 0, []).", translated);
+            Assert.AreEqual("invokes(a, b, 0, []).", translated);
         }
         [Test]
         public void TriggersTest()
@@ -119,7 +119,7 @@ namespace Tests
 
             var translated = actionLanguageTranslator.Translate(story);
 
-            Assert.AreEqual("triggers([[pi]], B).", translated);
+            Assert.AreEqual("triggers([[pi]], b).", translated);
         }
         [Test]
         public void ReleasesIfTest()
@@ -129,7 +129,7 @@ namespace Tests
 
             var translated = actionLanguageTranslator.Translate(story);
 
-            Assert.AreEqual("releases(A, [[f]], [[pi]).", translated);
+            Assert.AreEqual("releases(a, [[f]], [[pi]).", translated);
         }
         [Test]
         public void ReleasesTest()
@@ -138,7 +138,7 @@ namespace Tests
             var story = "A releases f";
             var translated = actionLanguageTranslator.Translate(story);
 
-            Assert.AreEqual("releases(A, [[f]], []).", translated);
+            Assert.AreEqual("releases(a, [[f]], []).", translated);
         }
         [Test]
         public void DisableBetweenTest()
@@ -148,7 +148,7 @@ namespace Tests
 
             var translated = actionLanguageTranslator.Translate(story);
 
-            Assert.AreEqual("disable_between(A, 1, 5).", translated);
+            Assert.AreEqual("disable_between(a, 1, 5).", translated);
         }
         [Test]
         public void DisableWhenTest()
@@ -158,7 +158,7 @@ namespace Tests
 
             var translated = actionLanguageTranslator.Translate(story);
 
-            Assert.AreEqual("disable_when(A, 4).", translated);
+            Assert.AreEqual("disable_when(a, 4).", translated);
         }
     }
 }
