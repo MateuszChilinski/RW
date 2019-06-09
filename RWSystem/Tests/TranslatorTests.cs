@@ -28,7 +28,7 @@ namespace Tests
 
             var translated = actionLanguageTranslator.Translate(story);
 
-            Assert.AreEqual("causes(a, [], [[pi]]).", translated);
+            Assert.AreEqual("impossible(a, [[pi]]).", translated);
         }
         [Test]
         public void CausesIfTest()
