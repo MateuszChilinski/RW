@@ -15,7 +15,7 @@ namespace RWSystem.Translation
         public override string Translate(string[] tokens)
         {
             int disableIndex = Array.IndexOf(tokens, Token.Disable.Value);
-            string action = tokens[disableIndex + 1];
+            string action = tokens[disableIndex + 1].FirstToLower();
             
             int betweenIndex = Array.IndexOf(tokens, Token.Between.Value);
 
@@ -25,7 +25,13 @@ namespace RWSystem.Translation
             if (!int.TryParse(tokens[betweenIndex + 2], out int end) || end <= 0 || end <= start)
                 throw new Exception("Czas końcowy musi być liczbą, dodatną oraz większą od start!");
 
-            return $"disable_between({action}, {start.ToString(CultureInfo.InvariantCulture)}, {end.ToString(CultureInfo.InvariantCulture)}).";
+            var endString = end.ToString(CultureInfo.InvariantCulture);
+            if (end >= 100)
+            {
+                endString = "inf";
+            }
+
+            return $"disable_between({action}, {start.ToString(CultureInfo.InvariantCulture)}, {endString}).";
         }
     }
 }

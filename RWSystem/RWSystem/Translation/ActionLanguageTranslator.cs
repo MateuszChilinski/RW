@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RWSystem.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -49,24 +50,27 @@ namespace RWSystem.Translation
             { StatementType.Actions,
                 new Token[] {Token.Acs} },
             { StatementType.Observations,
-                new Token[] {Token.Obs} },
+                new Token[] {Token.Obs} }
         };
 
         public string Translate(string story)
         {
+            var fluentsContainer = FluentsContainer.Instance;
+            fluentsContainer.Clear();
+
             string[] statements = story.Split(
                 new[] { "\r\n", "\r", "\n" },
                 StringSplitOptions.None
             );
 
             StringBuilder translation = new StringBuilder();
-            for(int i = 0; i < statements.Length; i++)
+            for (int i = 0; i < statements.Length; i++)
             {
                 try
                 {
                     translation.Append(TranslateStatement(statements[i]) + "\n");
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
                     throw new Exception("Błąd składni. Linia: " + (i + 1).ToString(), e);
                 }
@@ -90,7 +94,7 @@ namespace RWSystem.Translation
 
         StatementType? GetStatementType(string[] tokens)
         {
-            foreach(StatementType statemenType in Enum.GetValues(typeof(StatementType)))
+            foreach (StatementType statemenType in Enum.GetValues(typeof(StatementType)))
             {
                 if (characteristicTokens[statemenType].Aggregate(true, (acc, token) => acc && tokens.Contains(token.Value)))
                     return statemenType;

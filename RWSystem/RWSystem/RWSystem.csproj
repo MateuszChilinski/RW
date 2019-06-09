@@ -98,6 +98,8 @@
     <Compile Include="Translation\TypicallyCausesStatementTranslator.cs" />
     <Compile Include="Translation\TypicallyWhenTranslator.cs" />
     <Compile Include="Utils\ArrayExtensionMethods.cs" />
+    <Compile Include="Utils\FluentsContainer.cs" />
+    <Compile Include="Utils\StringExtensionMethods.cs" />
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,6 +112,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="engine.pl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

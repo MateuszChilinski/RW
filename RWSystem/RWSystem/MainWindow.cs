@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using RWSystem.Translation;
+using RWSystem.Utils;
 
 namespace RWSystem
 {
@@ -17,6 +18,7 @@ namespace RWSystem
         private object lastFocused;
 
         ActionLanguageTranslator actionLanguageTranslator = new ActionLanguageTranslator();
+        QueryLanguageTranslator queryLanguageTranslator = new QueryLanguageTranslator();
 
         public MainWindow()
         {
@@ -118,8 +120,7 @@ namespace RWSystem
             if (string.IsNullOrWhiteSpace(queryInProlog))
                 return;
 
-      QueryPrologText.Text = storyInProlog;
-            //QueryPrologText.Text = PrologSystem.MakeQuery(storyInProlog, queryInProlog);
+            QueryPrologText.Text = PrologSystem.MakeQuery(storyInProlog, queryInProlog);
 
         }
 
@@ -127,7 +128,9 @@ namespace RWSystem
         {
             try
             {
-                return actionLanguageTranslator.Translate(story);
+                var translatedStory = actionLanguageTranslator.Translate(story);
+                var scenario = FluentsContainer.Instance.FluentsToString();
+                return translatedStory  + '\n' + scenario;
             }
             catch(Exception e)
             {
@@ -140,8 +143,7 @@ namespace RWSystem
         {
             try
             {
-              //return actionLanguageTranslator.Translate(story);
-              return q;
+              return queryLanguageTranslator.Translate(q);
             }
             catch (Exception e)
             {

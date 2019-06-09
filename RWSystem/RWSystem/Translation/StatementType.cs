@@ -16,6 +16,9 @@ namespace RWSystem.Translation
         DisableBetween,
         DisableWhen,
         Observations,
-        Actions
+        Actions,
+        Possibly,
+        Neccesary,
+        Typically
     }
 }

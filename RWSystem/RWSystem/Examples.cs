@@ -17,7 +17,9 @@ namespace RWSystem
       "Test invokes OralExam after 3" + "\n" +
       "Cleaning causes corruption" + "\n" +
       "disable OralExam between 7, 1000" + "\n" +
-      "disable Test between 7, 1000";
+      "disable Test between 7, 1000" + "\n" +
+      "Acs = { ( Cleaning ; 1 ) , ( OralExam ; 3 ) , ( OralExam ; 4 ) }" + "\n" +
+      "Obs = { ( calm ; 0 ) , ( ¬corruption ; 0 ) }";
 
     public const string Example2Sc =
       "disable Control between 0, 2" + "\n" +
@@ -25,12 +27,16 @@ namespace RWSystem
       "PlayWithTicket releases ticketValid if ticketValid" + "\n" +
       "Control causes fine if ¬ticketValid" + "\n" +
       "Control invokes PayFine if ¬ticketValid" + "\n" +
-      "PayFine causes ¬fine, ticketValid if fine";
+      "PayFine causes ¬fine, ticketValid if fine" + "\n" +
+      "Acs = { ( ActivateTicket ; 1 ) , ( PlayWithTicket ; 2 ) , ( Control ; 3 ) , ( PayFine, 4 ) }" + "\n" +
+      "Obs = { ( ¬ticketValid ; 0 ) , ( ¬fine ; 0 ) }";
 
     public const string Example3Sc =
       "Work typically causes workDone if ¬workDone and rested" + "\n" +
       "Work causes ¬rested if ¬workDone and rested" + "\n" +
       "¬rested triggers Rest" + "\n" +
-      "Rest causes rested";
-  }
+      "Rest causes rested" + "\n" +
+      "Acs = { ( Rest ; 1 ) , ( Work ; 2 ) }" + "\n" +
+      "Obs = { ( ¬rested ; 0 ) , ( ¬workDone ; 0 ) }";
+    }
 }
