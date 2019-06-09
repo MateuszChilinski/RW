@@ -9,7 +9,7 @@ namespace Tests
 {
     [TestFixture]
     public class ActionLanguageTranslatorTests
-    {
+  {
         [Test]
         public void CausesTest()
         {

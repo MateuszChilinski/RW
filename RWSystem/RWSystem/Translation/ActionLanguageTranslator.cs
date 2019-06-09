@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RWSystem.Translation
 {
-    class ActionLanguageTranslator
+    public class ActionLanguageTranslator
     {
         Dictionary<StatementType, BaseTranslator> translators = new Dictionary<StatementType, BaseTranslator>()
         {
