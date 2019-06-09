@@ -69,7 +69,7 @@ namespace RWSystem.Translation
             string[] statements = story.Split(
                 new[] { "\r\n", "\r", "\n" },
                 StringSplitOptions.None
-            );
+            ).Where(s => !string.IsNullOrWhiteSpace(s)).ToArray();
 
             StringBuilder translation = new StringBuilder();
             for (int i = 0; i < statements.Length; i++)
