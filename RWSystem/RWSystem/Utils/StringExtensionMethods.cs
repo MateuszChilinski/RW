@@ -17,5 +17,10 @@ namespace RWSystem.Utils
         {
             return string.IsNullOrWhiteSpace(text);
         }
+
+        public static string ToCamelCase(this string statement)
+        {
+            return Char.ToLowerInvariant(statement[0]) + statement.Substring(1);
+        }
     }
 }

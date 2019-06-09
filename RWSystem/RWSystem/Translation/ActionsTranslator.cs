@@ -19,19 +19,12 @@ namespace RWSystem.Translation
             for (int i = 0; i < openParenthis.Length; i++)
             {
                 var tuple = tokens.SubArray(openParenthis[i] + 1, closeParenthis[i]);
-                var action = tuple[0].FirstToLower();
+                var action = tuple[0].ToCamelCase();
                 var time = tuple[tuple.Length - 1];
-                output = output + $"({action},{time})";
-
-                if (i != openParenthis.Length - 1)
-                {
-                    output += ", ";
-                }
+                output += output.EndsWith("[") ? $"({action}, {time})" : $", ({action}, {time})";
             }
 
-            output += "]).";
-
-            return output;
+            return output + "]).";
         }
     }
 }

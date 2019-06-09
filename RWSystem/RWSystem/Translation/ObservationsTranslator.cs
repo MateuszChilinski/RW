@@ -19,16 +19,10 @@ namespace RWSystem.Translation
             for (int i = 0; i < openParenthis.Length; i++)
             {
                 var observation = TranslateSingleTuple(tokens.SubArray(openParenthis[i] + 1, closeParenthis[i]));
-                output = output + observation;
-                if (i!= openParenthis.Length - 1)
-                {
-                    output += ", ";
-                }
+                output += output.EndsWith("[") ? observation : (", " + observation);
             }
 
-            output += "]).";
-
-            return output;
+            return output + "]).";
         }
 
         private string TranslateSingleTuple(string[] tokens)
