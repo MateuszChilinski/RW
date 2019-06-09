@@ -64,5 +64,11 @@ namespace RWSystem.Utils
 
             return result.ToString();
         }
+
+        public void Clear()
+        {
+            Fluents.Clear();
+            Negations.Clear();
+        }
     }
 }

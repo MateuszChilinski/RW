@@ -27,12 +27,16 @@ namespace RWSystem
       "PlayWithTicket releases ticketValid if ticketValid" + "\n" +
       "Control causes fine if ¬ticketValid" + "\n" +
       "Control invokes PayFine if ¬ticketValid" + "\n" +
-      "PayFine causes ¬fine, ticketV alid if fine";
+      "PayFine causes ¬fine, ticketValid if fine" + "\n" +
+      "Acs = { ( ActivateTicket ; 1 ) , ( PlayWithTicket ; 2 ) , ( Control ; 3 ) , ( PayFine, 4 ) }" + "\n" +
+      "Obs = { ( ¬ticketValid ; 0 ) , ( ¬fine ; 0 ) }";
 
     public const string Example3Sc =
       "Work typically causes workDone if ¬workDone and rested" + "\n" +
       "Work causes ¬rested if ¬workDone and rested" + "\n" +
       "¬rested triggers Rest" + "\n" +
-      "Rest causes rested";
-  }
+      "Rest causes rested" + "\n" +
+      "Acs = { ( Rest ; 1 ) , ( Work ; 2 ) }" + "\n" +
+      "Obs = { ( ¬rested ; 0 ) , ( ¬workDone ; 0 ) }";
+    }
 }
