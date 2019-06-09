@@ -29,7 +29,9 @@ namespace RWSystem.Translation
             { StatementType.Observations,
                 new ObservationsTranslator() },
             { StatementType.Possibly,
-                new PossiblyTranslator() }
+                new PossiblyTranslator() },
+             { StatementType.Impossible,
+                new ImpossibleStatementTranslator() }
         };
 
         Dictionary<StatementType, Token[]> characteristicTokens = new Dictionary<StatementType, Token[]>()
@@ -53,7 +55,9 @@ namespace RWSystem.Translation
             { StatementType.Observations,
                 new Token[] {Token.Obs} },
             { StatementType.Possibly,
-                new Token[] {Token.Possibly} }
+                new Token[] {Token.Possibly} },
+            { StatementType.Impossible,
+                new Token[] {Token.Impossible} }
         };
 
         public string Translate(string story)

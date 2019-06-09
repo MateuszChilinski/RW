@@ -4,6 +4,7 @@
 
 :- dynamic
     causes/3,
+    impossible/2
     negation/2,
     typically_causes/3,
     invokes/4,
@@ -82,6 +83,18 @@ getAllFluents(OldFluents, [], Fluents) :- Fluents = OldFluents.
 getAllFluents(OldFluents, [ConjunctionHead | ConjunctionTail], Fluents) :-
     ord_union(OldFluents, ConjunctionHead, TmpFluents),
     getAllFluents(TmpFluents, ConjunctionTail, Fluents).
+
+
+
+processImpossible(E,H) :- 
+    findall((Action,Condition), impossible(Action,Condition), ImpossibleList),
+    processImpossibleStatements(E,H,ImpossibleList)
+
+processImpossibleStatements(E,H,[]).
+processImpossibleStatements(E,H,[(Action, Condition)| Rest]):-
+    findAll(Time, member((Action,Time),E),Timepoints),
+    forall(member(Time, Timepoints), \+(hStar(H, Condition, Time)).
+    processImpossibleStatements(E, H, Rest).
 
 %Check rules predicates
 % CAUSES
@@ -261,7 +274,8 @@ check(H,E) :-
     forall(negation(Fluent, Negation), not((member((Fluent, T), H), member((Negation, T), H)))),
     once(disable_between(_, Timeout, inf)),
     forall(between(0, Timeout, Timepoint), ensureNoConcurrency(E, Timepoint)),
-    processDisable(E).
+    processDisable(E),
+    processImpossible(E,H).
 
 ensureNoConcurrency(E, Timepoint):-
     findall(A, member((A, Timepoint), E), CurrentActions),

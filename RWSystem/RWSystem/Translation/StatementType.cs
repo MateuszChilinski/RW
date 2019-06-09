@@ -10,6 +10,7 @@ namespace RWSystem.Translation
     {
         TypicallyCauses,
         Causes,
+        Impossible,
         Invokes,
         Triggers,
         Releases,

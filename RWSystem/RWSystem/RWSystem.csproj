@@ -67,6 +67,7 @@
     <Compile Include="Translation\CausesStatementTranslator.cs" />
     <Compile Include="Translation\DisableBetweenStatementTranslator.cs" />
     <Compile Include="Translation\DisableWhenStatementTranslator.cs" />
+    <Compile Include="Translation\ImpossibleStatementTranslator.cs" />
     <Compile Include="Translation\InvokesStatementTranslator.cs" />
     <Compile Include="Translation\NecessaryTranslator.cs" />
     <Compile Include="Translation\NecessaryWhenTranslator.cs" />

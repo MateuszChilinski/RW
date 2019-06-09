@@ -27,6 +27,6 @@ namespace RWSystem.Translation
         public static Token Necessary { get { return new Token("necessary"); } }
         public static Token Possibly { get { return new Token("possibly"); } }
         public static Token At { get { return new Token("at"); } }
-
+        public static Token Impossible { get { return new Token("impossible"); } }
     }
 }
