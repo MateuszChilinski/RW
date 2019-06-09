@@ -12,5 +12,10 @@ namespace RWSystem.Utils
         {
             return char.ToLower(text[0]).ToString() + text.Substring(1);
         }
+
+        public static bool IsNullOrWhiteSpace(this string text)
+        {
+            return string.IsNullOrWhiteSpace(text);
+        }
     }
 }

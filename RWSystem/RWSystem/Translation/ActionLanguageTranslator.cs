@@ -91,6 +91,7 @@ namespace RWSystem.Translation
         {
             string[] tokens = statement.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
                                        .Select(s => s.Trim(','))
+                                       .Where(s => !s.IsNullOrWhiteSpace())
                                        .ToArray();
             StatementType? statementType = GetStatementType(tokens);
 
