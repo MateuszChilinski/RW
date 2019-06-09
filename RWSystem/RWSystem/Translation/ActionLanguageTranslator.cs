@@ -63,6 +63,9 @@ namespace RWSystem.Translation
 
         public string Translate(string story)
         {
+            var fluentsContainer = FluentsContainer.Instance;
+            fluentsContainer.Clear();
+
             string[] statements = story.Split(
                 new[] { "\r\n", "\r", "\n" },
                 StringSplitOptions.None
@@ -80,8 +83,6 @@ namespace RWSystem.Translation
                     throw new Exception("Błąd składni. Linia: " + (i + 1).ToString(), e);
                 }
             }
-
-            translation.Append(FluentsContainer.Instance.FluentsToString());
 
             return translation.ToString().TrimEnd('\n');
         }

@@ -278,7 +278,7 @@ simulate(H, I, E, N, H2, I2, E2, N2, Timepoint, Timeout) :-
 %Predicate that checks if there is no contradiction
 check(H,E) :-
     forall(negation(Fluent, Negation), not((member((Fluent, T), H), member((Negation, T), H)))),
-    once(disable_between(_, Timeout, inf)),
+    get_timeout(Timeout),
     forall(between(0, Timeout, Timepoint), ensureNoConcurrency(E, Timepoint)),
     processDisable(E),
     processImpossible(E,H).
@@ -298,7 +298,7 @@ get_structure(H, I, E, N) :-
     check(H,E).
 
 get_all_models(H, I, E, N) :-
-    once(disable_between(_, Timeout, inf)),
+    get_timeout(Timeout),
     obs(OBS),
     addObservations([], OBS, H1),
     acs(ACS),
@@ -307,10 +307,13 @@ get_all_models(H, I, E, N) :-
     simulate(H2, [], E1, [], H, I, E2, N, 0, Timeout),
     cutActionsAfterTimeout(E2, E, Timeout).
 
-
 get_preferred_models(List) :-
     findall([H,I,E,N], get_structure(H, I, E, N),AllModels),
     checkIfPreferred(AllModels,AllModels,List).
+
+get_timeout(Timeout) :-
+    once(disable_between(_, Time, inf)) -> Timeout = Time;
+    Timeout = 10.
 
 checkIfPreferred([], AllModels, []).
 checkIfPreferred([[H,I,E,N]|Rest], AllModels, NewResult):-
