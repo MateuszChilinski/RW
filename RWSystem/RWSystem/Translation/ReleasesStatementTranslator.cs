@@ -16,7 +16,7 @@ namespace RWSystem.Translation
             string action = tokens[0].FirstToLower();
             
             int indexOfReleases = Array.IndexOf(tokens, Token.Releases.Value);
-            int indexOfIf = Array.IndexOf(tokens, Token.After.Value);
+            int indexOfIf = Array.IndexOf(tokens, Token.If.Value);
             string condition;
             string fluent;
             if (indexOfIf < 0)
