@@ -8,9 +8,9 @@ namespace RWSystem.Utils
 {
     public static class StringExtensionMethods
     {
-        public static string ToCamelCase(this string statement)
+        public static string FirstToLower(this string text)
         {
-            return Char.ToLowerInvariant(statement[0]) + statement.Substring(1);
+            return char.ToLower(text[0]).ToString() + text.Substring(1);
         }
     }
 }

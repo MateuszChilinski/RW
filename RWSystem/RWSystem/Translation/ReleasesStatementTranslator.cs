@@ -13,7 +13,7 @@ namespace RWSystem.Translation
         //into 'releases(A, f, <condition>).'
         public override string Translate(string[] tokens)
         {
-            string action = tokens[0];
+            string action = tokens[0].FirstToLower();
             
             int indexOfReleases = Array.IndexOf(tokens, Token.Releases.Value);
             int indexOfIf = Array.IndexOf(tokens, Token.If.Value);

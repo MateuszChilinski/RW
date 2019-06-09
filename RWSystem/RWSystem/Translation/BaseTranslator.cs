@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RWSystem.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -85,7 +86,11 @@ namespace RWSystem.Translation
         string TranslateLiteral(string literal)
         {
             if (literal.StartsWith("~") || literal.StartsWith("¬"))
+            {
+                FluentsContainer.Instance.AddFluent(literal.Substring(1));
                 return "not_" + literal.Substring(1);
+            }
+            FluentsContainer.Instance.AddFluent(literal);
             return literal;
         }
     }

@@ -14,10 +14,10 @@ namespace RWSystem.Translation
         //into 'invokes(Action, ResultAction, delay, <condition>).'
         public override string Translate(string[] tokens)
         {
-            string action = tokens[0];
-                   
+            string action = tokens[0].FirstToLower();
+
             int indexOfInvokes = Array.IndexOf(tokens, Token.Invokes.Value);
-            string resultAction = tokens[indexOfInvokes + 1];
+            string resultAction = tokens[indexOfInvokes + 1].FirstToLower();
              
             int indexOfAfter = Array.IndexOf(tokens, Token.After.Value);
             int delay = 0;
