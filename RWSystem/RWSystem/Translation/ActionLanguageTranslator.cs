@@ -76,8 +76,6 @@ namespace RWSystem.Translation
                 }
             }
 
-            translation.Append(fluentsContainer.FluentsToString());
-
             return translation.ToString().TrimEnd('\n');
         }
 

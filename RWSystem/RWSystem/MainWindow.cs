@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using RWSystem.Translation;
+using RWSystem.Utils;
 
 namespace RWSystem
 {
@@ -127,7 +128,9 @@ namespace RWSystem
         {
             try
             {
-                return actionLanguageTranslator.Translate(story);
+                var translatedStory = actionLanguageTranslator.Translate(story);
+                var scenario = FluentsContainer.Instance.FluentsToString();
+                return story + scenario;
             }
             catch(Exception e)
             {
