@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RWSystem.Utils;
 
 namespace RWSystem.Translation
 {
@@ -38,7 +39,7 @@ namespace RWSystem.Translation
 
         public string Translate(string query)
         {
-            string[] tokens = query.Split(' ');
+            string[] tokens = query.Split(' ').Where(s => !s.IsNullOrWhiteSpace()).ToArray();
             QueryType? queryType = GetQueryType(tokens);
 
             if (!queryType.HasValue)
