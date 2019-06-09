@@ -130,7 +130,7 @@ namespace RWSystem
             {
                 var translatedStory = actionLanguageTranslator.Translate(story);
                 var scenario = FluentsContainer.Instance.FluentsToString();
-                return story + scenario;
+                return translatedStory  + '\n' + scenario;
             }
             catch(Exception e)
             {
