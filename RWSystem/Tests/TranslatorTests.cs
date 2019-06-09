@@ -129,7 +129,7 @@ namespace Tests
 
             var translated = actionLanguageTranslator.Translate(story);
 
-            Assert.AreEqual("releases(A, [[f]], [[pi]).", translated);
+            Assert.AreEqual("releases(A, [[f]], [[pi]]).", translated);
         }
         [Test]
         public void ReleasesTest()
