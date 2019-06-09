@@ -158,7 +158,7 @@ namespace Tests
 
             var translated = actionLanguageTranslator.Translate(story);
 
-            Assert.AreEqual("disable_when(a, 4).", translated);
+            Assert.AreEqual("disable_between(a, 4, 4).", translated);
         }
     }
 }
