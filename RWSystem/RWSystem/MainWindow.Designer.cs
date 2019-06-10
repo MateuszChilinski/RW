@@ -176,8 +176,6 @@
             this.StoryTextBox.Name = "StoryTextBox";
             this.StoryTextBox.Size = new System.Drawing.Size(720, 591);
             this.StoryTextBox.TabIndex = 0;
-            this.StoryTextBox.Text = "father(martin, inka).\nfather(uwe, gloria).\nfather(uwe, melanie).\nfather(uwe, ayal" +
-    "a).";
             // 
             // MainRightPanel
             // 
@@ -283,7 +281,6 @@
             this.QueryText.Name = "QueryText";
             this.QueryText.Size = new System.Drawing.Size(322, 22);
             this.QueryText.TabIndex = 0;
-            this.QueryText.Text = "father(uwe, Child)";
             // 
             // ExecuteQueryButton
             // 
