@@ -15,7 +15,7 @@ namespace RWSystem
       "OralExam typically causes ¬calm if ¬corruption" + "\n" +
       "OralExam causes ¬corruption" + "\n" +
       "Test invokes OralExam after 3" + "\n" +
-      "Test invokes Oral exam after 3" + "\n" +
+      "Test invokes OralExam after 3" + "\n" +
       "Cleaning causes corruption" + "\n" +
       "disable OralExam between 7, 1000" + "\n" +
       "disable Test between 7, 1000" + "\n" +
