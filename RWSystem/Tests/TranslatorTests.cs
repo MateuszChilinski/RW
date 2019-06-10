@@ -10,27 +10,6 @@ using RWSystem;
 namespace Tests
 {
     [TestFixture]
-    public class QueryTest
-    {
-        [Test]
-        public void NecessaryTest()
-        {
-            var story = "";
-            var query = "";
-            var actionLanguageTranslator = new ActionLanguageTranslator();
-            var queryLanguageTranslator = new QueryLanguageTranslator();
-            var translatedStory = actionLanguageTranslator.Translate(story);
-            var scenario = FluentsContainer.Instance.FluentsToString();
-            var storyInProlog = translatedStory + "\n" + scenario;
-            var queryInProlog = queryLanguageTranslator.Translate(query);
-
-            var output = PrologSystem.MakeQuery(storyInProlog, queryInProlog);
-
-            Assert.AreEqual("", output);
-        }
-    }
-
-    [TestFixture]
     public class ActionLanguageTranslatorTests
     {
         [Test]
