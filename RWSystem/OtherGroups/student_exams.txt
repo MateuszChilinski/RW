@@ -1,0 +1,22 @@
+Typowi studenci uczą się do egzaminu. Zazwyczaj nauka powoduje posiadanie wiedzy. Niemożliwe jest podejście do egzaminu bez posiadania wiedzy. Egzamin składa się z dwóch pytań: teoretyczne i praktycznego. Nie można odpowiadać na pytanie praktyczne bez zaliczenia teoretycznego. Student z wiedzą zawsze zalicza teorię i zazwyczaj praktykę.
+
+Learning typically causes knowledge
+impossible Exam if ¬knowledge
+Exam invokes QuestionTheory after 1
+Exam invokes QuestionPractice after 2
+impossible QuestionPractice if ¬passtheory
+QuestionTheory causes passtheory if knowledge
+QuestionPractice typically causes passpractice if knowledge
+Acs = { ( Learning ; 1 ) , ( Exam ; 2 ) }
+Obs = { ( ¬passtheory ; 0 ) , ( ¬passpractice ; 0 ) , ( ¬knowledge ; 0 ) }
+
+Typowy student nauczy się i podejdzie do egzaminu. Ci którzy podchodzą do egzaminu zdają teorię i zazwyczaj zdają praktykę. Czyli spodziewamy się, że typowy student ma wiedzę i zalicza obie części egzaminu. Czasami student posiada wiedzę, ale nie zalicza praktyki. Czasami student nie nauczy się i nie podejdzie do egzaminu.
+
+Czy scenariusz będzie zawsze wykonywalny? Nie, bo nie każdy podejdzie do egzaminu
+necessary Sc
+Czy możliwe jest, że student podejdzie do egzaminu? Tak
+possibly Exam at 2 when Sc
+Czy typowy student zaliczy egzamin praktyczny? Tak
+typically passpractice at 5 when Sc
+Czy możliwe jest posiadanie wiedzy bez nauki? Nie
+possibly knowledge at 1 when Sc
