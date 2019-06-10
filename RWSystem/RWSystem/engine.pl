@@ -168,7 +168,7 @@ process_invokes([], H, I, E, N, H2, I2, E2, N2, Timepoint) :-
 process_invokes([(Action, ResultAction, Period, Condition) | InvokesTail], H, I, E, N, H2, I2, E2, N2, Timepoint) :- 
 (
     member((Action, Timepoint), E), hStar(H, Condition, Timepoint) ->
-        T2 is integer(Timepoint) + integer(Period),
+        T2 is integer(Timepoint) + integer(Period + 1),
         union(E, [(ResultAction, T2)], ET)
 ;   ET = E
 ),
