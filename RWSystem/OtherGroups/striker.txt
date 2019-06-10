@@ -1,0 +1,26 @@
+Krzysztof jest napastnikiem i rozgrywa mecz piłki nożnej. Jeśli dostaje dobre podanie strzela na bramkę. Zazwyczaj
+strzał kończy się golem. Jeśli nie strzeli bramki po strzale traci zaufanie trenera
+i jeśli spudłuje kolejnym razem, nie mając bramki na koncie trener zdejmie go z boiska.
+
+impossible Shoot if ¬onPitch
+Shoot typically causes goal
+Shoot invokes MakeCoachDecision after 1
+RemoveFromPitch causes ¬onPitch
+Untrust causes ¬trust
+MakeCoachDecision invokes RemoveFromPitch after 1 if ¬trust
+MakeCoachDecision invokes Untrust after 1 if ¬goal
+GoodPass invokes Shoot after 1
+
+Krzysztof otrzymuje w 1 i 4 jednostce czasu otrzymuje dobre podanie.
+
+Acs = { ( GoodPass ; 1 ), ( GoodPass ; 4 ) }
+Obs = { (  onPitch ; 0 ) , (  trust ; 0 ) , ( ¬goal ; 0 ) }
+
+Czy Krzysztof napewno będzie na boisku w 9 jednostce czasu? Nie
+necessary onPitch at 9 when Sc
+Czy Krzysztof może oddać strzał bez dobrego podania? Nie
+possibly Shoot at 0 when Sc
+Czy pierwszy strzał w meczu typowo spowoduje zdobycie bramki? Tak
+typically goal at 3 when Sc
+Czy możliwe jest aby trener ufał Krzysztofowi po pierwszym strzale? Tak
+possibly trust at 4 when Sc
