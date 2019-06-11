@@ -171,11 +171,14 @@
             // StoryTextBox
             // 
             this.StoryTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.StoryTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.StoryTextBox.Location = new System.Drawing.Point(9, 7);
             this.StoryTextBox.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.StoryTextBox.Name = "StoryTextBox";
             this.StoryTextBox.Size = new System.Drawing.Size(720, 591);
             this.StoryTextBox.TabIndex = 0;
+            this.StoryTextBox.Text = "father(martin, inka).\nfather(uwe, gloria).\nfather(uwe, melanie).\nfather(uwe, ayal" +
+    "a).";
             // 
             // MainRightPanel
             // 
@@ -276,11 +279,13 @@
             // QueryText
             // 
             this.QueryText.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QueryText.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.QueryText.Location = new System.Drawing.Point(9, 7);
             this.QueryText.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.QueryText.Name = "QueryText";
-            this.QueryText.Size = new System.Drawing.Size(322, 22);
+            this.QueryText.Size = new System.Drawing.Size(322, 41);
             this.QueryText.TabIndex = 0;
+            this.QueryText.Text = "father(uwe, Child)";
             // 
             // ExecuteQueryButton
             // 
