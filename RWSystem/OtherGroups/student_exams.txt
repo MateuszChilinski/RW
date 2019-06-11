@@ -1,4 +1,4 @@
-Typowi studenci uczą się do egzaminu. Zazwyczaj nauka powoduje posiadanie wiedzy. Niemożliwe jest podejście do egzaminu bez posiadania wiedzy. Egzamin składa się z dwóch pytań: teoretyczne i praktycznego. Nie można odpowiadać na pytanie praktyczne bez zaliczenia teoretycznego. Student z wiedzą zawsze zalicza teorię i zazwyczaj praktykę.
+﻿Typowi studenci uczą się do egzaminu. Zazwyczaj nauka powoduje posiadanie wiedzy. Niemożliwe jest podejście do egzaminu bez posiadania wiedzy. Egzamin składa się z dwóch pytań: teoretyczne i praktycznego. Nie można odpowiadać na pytanie praktyczne bez zaliczenia teoretycznego. Student z wiedzą zawsze zalicza teorię i zazwyczaj praktykę.
 
 Learning typically causes knowledge
 impossible Exam if ¬knowledge

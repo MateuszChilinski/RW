@@ -1,12 +1,12 @@
-Marcin wybrał się na polowanie. Jest on dość dobrym strzelcem, dzięki czemu zawsze trafia w duże zwierzęta i zazwyczaj trafia w małe. Jego celem jest upolowanie jednego zwierzęcia. W pierwszej godzinie strzela do małego zająca, w którego zazwyczaj trafia. Strzał powoduje poszukiwanie trafionego zwierzęcia i jeśli zwierze przeżyło to jego ucieczkę. Jeśli Marcin nie znalazł martwego zająca, to strzela do dużego niedźwiedzia. Początkowo zwierzęta żyją.
+﻿Marcin wybrał się na polowanie. Jest on dość dobrym strzelcem, dzięki czemu zawsze trafia w duże zwierzęta i zazwyczaj trafia w małe. Jego celem jest upolowanie jednego zwierzęcia. W pierwszej godzinie strzela do małego zająca, w którego zazwyczaj trafia. Strzał powoduje poszukiwanie trafionego zwierzęcia i jeśli zwierze przeżyło to jego ucieczkę. Jeśli Marcin nie znalazł martwego zająca, to strzela do dużego niedźwiedzia. Początkowo zwierzęta żyją.
 
 ShootRabit typically causes ¬rabitalive if rabitalive
-ShootRabit invokes RabitSearch after 1
+ShootRabit invokes RabitSearch
 RabitSearch causes rabitsearched if ¬rabitalive
 RabitSearch causes ¬rabitsearched if rabitalive
-RabitSearch invokes ShootBear after 1 if ¬rabitsearched
+RabitSearch invokes ShootBear if ¬rabitsearched
 ShootBear causes ¬bearalive if bearalive
-ShootBear invokes BearSearch after 1
+ShootBear invokes BearSearch
 BearSearch causes bearsearched if ¬bearalive
 Acs = { ( ShootRabit ; 1 ) }
 Obs = { ( rabitalive ; 0 ) , ( bearalive ; 0 ) , ( ¬bearsearched ; 0 ) , ( ¬rabitsearched ; 0 ) }
