@@ -312,6 +312,7 @@
             // QueryPrologText
             // 
             this.QueryPrologText.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QueryPrologText.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.QueryPrologText.Location = new System.Drawing.Point(9, 7);
             this.QueryPrologText.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.QueryPrologText.Name = "QueryPrologText";
