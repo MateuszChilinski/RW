@@ -25,6 +25,8 @@ namespace RWSystem
             InitializeComponent();
             ExecuteQueryButton.Click += ExecuteQuery;
             InitializeMenu();
+            ReplaceScenarioText(Examples.Example1Sc);
+            QueryText.Text = "possibly Sc";
         }
 
         private void InitializeMenu()
