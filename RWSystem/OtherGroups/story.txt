@@ -1,0 +1,24 @@
+Studenci informatyki jeżdżą na wyjazdy integracyjne o ile nie są chorzy. Zazwyczaj jeśli student nie jest uodporniony na naukę
+to jeden dzień nauki powoduje u niego chorobę. Jeśli pojedzie na wyjazd i nie będzie się podczas niego uczył, to 
+zazwyczaj zostanie uodporniony. Po trzech dniach studenci wracają z wyjazdu.
+
+impossible ComeBackFromTrip if ¬onTrip
+Trip causes onTrip if ¬sick
+Trip invokes ComeBackFromTrip after 3 if ¬sick
+Learning typically causes sick if ¬immunized
+Learning causes learntOnTrip if onTrip
+ComeBackFromTrip causes ¬onTrip
+ComeBackFromTrip typically causes immunized if ¬learntOnTrip
+ComeBackFromTrip causes ¬learntOnTrip
+
+Acs = { ( Learning ; 0 ) , ( Trip ; 2 )  }
+Obs = { ( ¬immunized ; 0 ) , (  ¬learntOnTrip ; 0 ) , ( ¬onTrip ; 0 ) , ( ¬sick ; 0 ) }
+
+Czy student jest zawsze uodporniony po powrocie z wyjazdu? Nie
+necessary immunized at 7 when Sc
+Czy student może być uodporniony po wycieczce? Tak
+possibly immunized at 7 when Sc
+Czy możliwy jest powrot z wyjazdu w 6 jednostce czasu? Tak
+possibly ComeBackFromTrip at 6 when Sc
+Czy typowy jest pobyt na wyjeździe w 3 jednostce czasu? Nie
+typically onTrip at 3 when Sc

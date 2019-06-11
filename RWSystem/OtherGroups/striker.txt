@@ -18,7 +18,7 @@ Obs = { (  onPitch ; 0 ) , (  trust ; 0 ) , ( ¬goal ; 0 ) }
 
 Czy Krzysztof napewno będzie na boisku w 9 jednostce czasu? Nie
 necessary onPitch at 9 when Sc
-Czy Krzysztof może oddać strzał bez dobrego podania? Nie
+Czy Krzysztof może oddać strzał w 0 jednostce czasu? Nie
 possibly Shoot at 0 when Sc
 Czy pierwszy strzał w meczu typowo spowoduje zdobycie bramki? Tak
 typically goal at 3 when Sc
