@@ -1,15 +1,15 @@
-Krzysztof jest napastnikiem i rozgrywa mecz piłki nożnej. Jeśli dostaje dobre podanie strzela na bramkę. Zazwyczaj
+﻿Krzysztof jest napastnikiem i rozgrywa mecz piłki nożnej. Jeśli dostaje dobre podanie strzela na bramkę. Zazwyczaj
 strzał kończy się golem. Jeśli nie strzeli bramki po strzale traci zaufanie trenera
 i jeśli spudłuje kolejnym razem, nie mając bramki na koncie trener zdejmie go z boiska.
 
 impossible Shoot if ¬onPitch
 Shoot typically causes goal
-Shoot invokes MakeCoachDecision after 1
+Shoot invokes MakeCoachDecision
 RemoveFromPitch causes ¬onPitch
 Untrust causes ¬trust
-MakeCoachDecision invokes RemoveFromPitch after 1 if ¬trust
-MakeCoachDecision invokes Untrust after 1 if ¬goal
-GoodPass invokes Shoot after 1
+MakeCoachDecision invokes RemoveFromPitch if ¬trust
+MakeCoachDecision invokes Untrust if ¬goal
+GoodPass invokes Shoot
 
 Krzysztof otrzymuje w 1 i 4 jednostce czasu otrzymuje dobre podanie.
 

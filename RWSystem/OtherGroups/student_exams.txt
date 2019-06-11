@@ -2,8 +2,8 @@
 
 Learning typically causes knowledge
 impossible Exam if ¬knowledge
-Exam invokes QuestionTheory after 1
-Exam invokes QuestionPractice after 2
+Exam invokes QuestionTheory
+Exam invokes QuestionPractice after 1
 impossible QuestionPractice if ¬passtheory
 QuestionTheory causes passtheory if knowledge
 QuestionPractice typically causes passpractice if knowledge
